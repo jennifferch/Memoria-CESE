@@ -1,0 +1,113 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{CIAA:firmwarev2}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{CIAA Firmware v2}
+    \verb{url}
+    \verb https://github.com/ciaa/firmware_v2
+    \endverb
+    \field{year}{2016}
+  \endentry
+
+  \entry{angular}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Documentación de Angular}
+    \verb{url}
+    \verb https://angular.io/docs
+    \endverb
+  \endentry
+
+  \entry{blockly}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Documentación de Blockly}
+    \verb{url}
+    \verb https://developers.google.com/blockly/
+    \endverb
+  \endentry
+
+  \entry{typescript}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Documentación de TypeScript}
+    \verb{url}
+    \verb https://www.typescriptlang.org
+    \endverb
+  \endentry
+
+  \entry{CIAA}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=P}{%
+         family={{Proyecto CIAA}},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P1}
+    \strng{fullhash}{P1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{note}{Disponible: 2016-06-25}
+    \field{title}{Computadora Industrial Abierta Argentina}
+    \verb{url}
+    \verb http://proyecto-ciaa.com.ar/devwiki/doku.php?id=start
+    \endverb
+    \field{year}{2014}
+  \endentry
+
+  \entry{sAPI}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{sAPI}
+    \verb{url}
+    \verb https://github.com/epernia/sAPI
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{electron}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Sobre Electron}
+    \verb{url}
+    \verb https://electron.atom.io/docs/tutorial/about/
+    \endverb
+  \endentry
+
+  \entry{nodejs}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Sobre NodeJS}
+    \verb{url}
+    \verb https://nodejs.org/en/about/
+    \endverb
+  \endentry
+\enddatalist
+\endinput

@@ -1,0 +1,37 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{section*.1}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n General}{1}{chapter.7}
+\contentsline {section}{\numberline {1.1}Introducci\IeC {\'o}n}{1}{section.8}
+\contentsline {subsection}{\numberline {1.1.1}CIAABOT}{1}{subsection.10}
+\contentsline {subsection}{\numberline {1.1.2}\emph {Debug} y \emph {Debugger}}{3}{subsection.12}
+\contentsline {section}{\numberline {1.2}Motivaci\IeC {\'o}n}{3}{section.13}
+\contentsline {section}{\numberline {1.3}Objetivos y alcance}{4}{section.14}
+\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n Espec\IeC {\'\i }fica}{5}{chapter.15}
+\contentsline {section}{\numberline {2.1}Componentes CIAABOT}{5}{section.16}
+\contentsline {subsection}{\numberline {2.1.1}CIAABOT IDE}{5}{subsection.18}
+\contentsline {subsection}{\numberline {2.1.2}CIAABOTS}{7}{subsection.20}
+\contentsline {subsection}{\numberline {2.1.3}Firmware}{7}{subsection.21}
+\contentsline {section}{\numberline {2.2}Alternativas de dise\IeC {\~n}o para CIAABOT debugger}{7}{section.22}
+\contentsline {section}{\numberline {2.3}Firmata}{8}{section.27}
+\contentsline {subsection}{\numberline {2.3.1}Johnny-Five}{9}{subsection.29}
+\contentsline {section}{\numberline {2.4}Sistema para depuraci\IeC {\'o}n propuesto}{9}{section.31}
+\contentsline {subsection}{\numberline {2.4.1}Limitaci\IeC {\'o}n}{9}{subsection.32}
+\contentsline {subsection}{\numberline {2.4.2}Ventaja}{10}{subsection.33}
+\contentsline {section}{\numberline {2.5}Requerimientos}{10}{section.34}
+\contentsline {subsection}{\numberline {2.5.1}Requerimientos asociados con el Proyecto CIAABOT}{10}{subsection.35}
+\contentsline {subsection}{\numberline {2.5.2}Componentes establecidos en CIAABOT}{11}{subsection.36}
+\contentsline {subsection}{\numberline {2.5.3}Firmware}{11}{subsection.38}
+\contentsline {subsection}{\numberline {2.5.4}Procesos Finales}{11}{subsection.39}
+\contentsline {section}{\numberline {2.6}Planificaci\IeC {\'o}n}{11}{section.40}
+\contentsline {subsection}{\numberline {2.6.1}Desglose en tareas}{12}{subsection.41}
+\contentsline {subsection}{\numberline {2.6.2}Activity On-node}{13}{subsection.51}
+\contentsline {subsection}{\numberline {2.6.3}Diagrama de Gantt}{14}{subsection.54}
+\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{17}{chapter.59}
+\contentsline {section}{\numberline {3.1}Estructura del software}{17}{section.60}
+\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{19}{chapter.90}
+\contentsline {section}{\numberline {4.1}Pruebas funcionales del hardware}{19}{section.91}
+\contentsline {chapter}{\numberline {5}Conclusiones}{21}{chapter.92}
+\contentsline {section}{\numberline {5.1}Conclusiones generales }{21}{section.93}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{21}{section.94}
+\contentsline {chapter}{Bibliograf\'{\i }a}{23}{appendix*.95}
