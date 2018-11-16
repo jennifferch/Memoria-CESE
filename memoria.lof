@@ -1,19 +1,18 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \IeC {\'A}rea de flujo de trabajo de CIAABOT-IDE. Recuperado de \url {https://laboratorios.fi.uba.ar}\relax }}{2}{figure.caption.11}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \IeC {\'A}rea de flujo de trabajo de CIAABOT-IDE. Recuperado de \url {https://laboratorios.fi.uba.ar}\relax }}{2}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Componentes CIAABOT. Recuperado de \url {https://laboratorios.fi.uba.ar}\relax }}{5}{figure.caption.17}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Editor gr\IeC {\'a}fico de CIAABOT-IDE.\relax }}{6}{figure.caption.19}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Arquitectura de Firmata.\relax }}{8}{figure.caption.28}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Cliente firmata: Johnny-Five. Recuperado de \url {http//johnny-five.io}\relax }}{9}{figure.caption.30}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{11}{figure.caption.37}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de Node.\relax }}{14}{figure.caption.52}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Tabla de colores diagrama Activity\relax }}{14}{figure.caption.53}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{15}{figure.caption.55}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 2.\relax }}{15}{figure.caption.56}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{16}{figure.caption.57}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{16}{figure.caption.58}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Componentes CIAABOT. Recuperado de \url {https://laboratorios.fi.uba.ar}\relax }}{5}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Editor gr\IeC {\'a}fico de CIAABOT-IDE.\relax }}{6}{figure.caption.24}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{8}{figure.caption.30}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de Node.\relax }}{11}{figure.caption.45}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tabla de colores diagrama Activity\relax }}{12}{figure.caption.46}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{12}{figure.caption.48}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de Gantt - Parte 2.\relax }}{13}{figure.caption.49}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{13}{figure.caption.50}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{13}{figure.caption.51}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Uso de firmata con la Educiaa.\relax }}{17}{figure.caption.62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

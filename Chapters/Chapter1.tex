@@ -4,7 +4,7 @@
 
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \label{IntroGeneral}
-En este capítulo se presenta una breve introdución a la plataforma CIAABOT, se
+En este capítulo se presenta una breve introdución a la plataforma CIAABOT, y se
 indica la necesidad que dio origen a desarrollar este proyecto. También se detallan
 los motivos que llevaron a realizarlo, cuáles son los objetivos y el alcance.
 
@@ -50,13 +50,13 @@ Las partes componentes que lo integran son:
 
 \begin{itemize}
 	\item CIAABOT IDE: es un entorno de programación en lenguaje CIAABOT (basado en  Blockly\citep{blockly}), que es un lenguaje gráfico donde un programa se crea encastrando bloques. Permite crear el programa, compilarlo y descargarlo a las plataformas de hardware.
-	\item CIAABOTS: son las plataformas de hardware que se programan desde CIAABOT IDE. Actualmente disponible únicamente la EDU-CIAA-NXP.
+	\item CIAABOTS: son las plataformas de hardware que se programan desde CIAABOT IDE. 
 	\item Firmware: el programa creado en CIAABOT IDE genera internamente código C que se combina con el firmare pre-existente del proyecto CIAA y se compila para su posterior descarga a la plataforma.
 \end{itemize}
 
 Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flujo de trabajo, las cuales son:
 
-\begin{itemize}
+\begin{enumerate}
 	\item Armar un programa con los bloques: encastrando bloques predifinidos por
 	la plataforma.	
 	\item Visualizar el código generado en C: actualizado en tiempo real cuando se
@@ -65,7 +65,7 @@ Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flu
 	para usar en la placa.
 	\item Descargar: instalar el código generado en la plataforma de hardware.
 	\item Usar la placa con el programa: comenzar a realizar los ensayos sobre la placa.
-\end{itemize}
+\end{enumerate}
 
 \begin{figure}[h]
 	\centering
@@ -79,9 +79,8 @@ Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flu
 
 La depuración es un programa que ejecuta ciertas rutinas de código de otros programas (programa objetivo), con el fin de encontrar y eliminar errores de ejecución. Esta técnica permite al código ser examinado obteniendo información muy importante sobre el estado en el que se está ejecutando.
 
-Mediante el proceso de depuración de programas, se puede identificar y corregir errores propios de programación, corriendo un programa paso a paso depurando
-el código, parandolo o pausandolo, de esta manera se realiza el seguimiento de
-valores de las variables críticas, dando en consecuencia la posibilidad al programador
+Mediante el proceso de depuración de programas, se puede identificar y corregir errores propios de programación, corriendo un programa paso a paso, parandolo o pausandolo, de esta manera se realiza el seguimiento de
+valores de las variables, dando en consecuencia la posibilidad al programador
 de corregir errores y pulir el funcionamiento.
 
 Como el software en general y los sistemas electrónicos se vuelven generalmente
@@ -89,28 +88,22 @@ más complejos, se da importancia al desarrollo de técnicas y herramientas de d
 precisamente por las ventajas que tiene, como son el detectar anomalías
 en cada paso, corregir y mejorar las funcionalidades. 
 
-La mayoría de las computadoras modernos tienen el soporte de su hardware para
+La mayoría de las computadoras modernas tienen el soporte de su hardware para
 realizar la depuración, en el caso de la EDU-CIAA-NXP cuenta con un puerto USB
 para realizar la depuración de un programa en el microcontrolador. El \emph{debugger}
 utilizado en el IDE-Eclipse puede realizar la depuración conectándose al puerto
 USB.
-
-La plataforma CIAABOT no posee ninguna forma que permita \emph{debuggear} un programa.
-Para realizar los ensayos se tiene que compilar el programa, descargalo y luego manualmente probar la lógica en la placa usando, como por ejemplo, los leds, botones, mensajes por UART, etc.
-
 
 %----------------------------------------------------------------------------------------
 
 \section{Motivación}
 \label{Motivación}
 
+La plataforma CIAABOT no posee ninguna forma que permita \emph{debuggear} un programa.
+Para realizar los ensayos se tiene que compilar el programa, descargalo y luego manualmente probar la lógica en la placa usando, como por ejemplo, los leds, botones, mensajes por UART, etc.
+
 Se plantea el desarrollo de un \emph{debugger} interactivo para CIAABOT, debido a la
 importancia de realizar pruebas de un programa en tiempo real, y de esta manera verificar la lógica del programa.
-
-La importancia de usar un \emph{debugger} a nivel de bloques, es que permite al usuario
-ir ejecutar las rutinas de código de manera mas pausada, ademas de ir monitoreando
-el estado de las variables que son parte de su programa, ayudándolos a
-identificar y subsanar los errores de ejecución.
 
 El desarrollo del \emph{debugger} interactivo para CIAABOT, seguirá los lineamientos
 de diseño de CIAABOT, implementando el desarrollo con una visión de
