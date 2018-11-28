@@ -34,8 +34,10 @@
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Desactivar los Puntos de interrupci\IeC {\'o}n inactivo.\relax }}{25}{figure.caption.92}
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Men\IeC {\'u} de visualizaci\IeC {\'o}n de variables.\relax }}{26}{figure.caption.94}
 \contentsline {figure}{\numberline {3.21}{\ignorespaces Ventana de Puntos de ruptura (\emph {breakpoints}).\relax }}{26}{figure.caption.95}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Ejemplo de c\IeC {\'o}digo en bloques para el barrido de un servo.\relax }}{27}{figure.caption.99}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Barrido de servomotor ejecutado con johnny five\relax }}{28}{figure.caption.108}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Ejemplo de wait\relax }}{28}{figure.caption.114}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Di\IeC {\'a}grama de Bloques para el manejo de los perif\IeC {\'e}ricos.\relax }}{27}{figure.caption.98}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Ejemplo de c\IeC {\'o}digo en bloques para el barrido de un servo.\relax }}{28}{figure.caption.100}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Barrido de servomotor ejecutado con johnny five\relax }}{28}{figure.caption.109}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Ejemplo de wait\relax }}{28}{figure.caption.115}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de secuencia.\relax }}{30}{figure.caption.122}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

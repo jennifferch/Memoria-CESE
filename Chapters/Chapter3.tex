@@ -148,7 +148,7 @@ En la figura \ref{fig:diagrama-estados} se expone el diagrama de estados de el s
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics*[width=15cm,height=15cm]{./Figures/diagrama-estados.pdf}
+		\includegraphics*[width=15cm]{./Figures/diagrama-estados.pdf}
 		\par\caption{Diagrama de máquina de estados de los modos de funcionamiento.}\label{fig:diagrama-estados}
 	\end{center}
 \end{figure}
@@ -442,6 +442,14 @@ CIAABOT \emph{debug} esta desarrollado en el lenguaje Javascript, cuando se impo
 En la Aplicación mediante el cliente firmata Johnny-Five se establece la comunicación entre la aplicación y la placa EDUCIAA-NXP, para el manejo de los periféricos. 
 
 Johnny-Five es un cliente firmata, basado en el lenguaje javaScript, y dentro del entorno de \emph{debug}, es el encargado de interactuar con el microcontrolador con firmata4CIAA para la manipulación de los periféricos.
+En la siguiente figura \ref{fig:diagrama-bloques} se muestra el diágrama de bloques.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics*[width=13cm]{./Figures/diagrama-bloques.PNG}
+	\caption{Diágrama de Bloques para el manejo de los periféricos.}
+	\par\label{fig:diagrama-bloques}
+\end{figure}
 
 \subsection{Implentación de la GUI}
 \label{subsec:Implentación de la GUI}
@@ -509,7 +517,19 @@ En la figura \ref{fig:servoj5} se mostro el bloque gráfico que usaba los comado
 
 \emph{to(degrees 0-180 [, ms [, rate]])// establece la posicion de 0 a 180 grados}
 
-\subsection{Implentación de los Servicios}
+
+La figura \ref{fig:DocSecuencia} muestra el diágrama de secuencia del acceso a un períferico mediante el protocolo firmata.
+
+
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics*[width=15cm]{./Figures/DocSecuencia.pdf}
+		\par\caption{Diagrama de secuencia.}\label{fig:DocSecuencia}
+	\end{center}
+\end{figure}
+
+
+\subsection{Herramientas utilizadas}
 \label{subsec:Implementación del modelo computacional Servicios}
 
 Para el desarrollo del entorno de debugger se utilizaron los siguientes proyectos de código abierto:
@@ -523,7 +543,7 @@ Para el desarrollo del entorno de debugger se utilizaron los siguientes proyecto
 
 	\item Acorn\citep{acorn}: es un rápido analizador tolerante a errores de JavaScript escrito en JavaScript, el analizador dentro del proyecto es usado para darle soporte al análisis/lectura de código del interprete de JavaScript.
 	
-	\item JQuery\citep{jQuery}: la biblioteca multiplataforma de JavaScript permite interactuar con los documentos HTML, manipular el DOM, agregar dinamismo a la aplicación y manejar eventos.
+	\item JQuery\citep{jQuery}: la biblioteca multiplataforma de JavaScript permite interactuar con los documentos HTML, manipular el árbol DOM de la página, agregar dinamismo a la aplicación y manejar eventos.
 	
 	\item Signals\citep{signals}: biblioteca escrita en JavaScript que implementa el patrón publicación/subscripción para agregar emisores de eventos al código cuando los bloques gráficos que se estan ejecutando son resaltados.
 	
@@ -539,8 +559,25 @@ Para el desarrollo del entorno de debugger se utilizaron los siguientes proyecto
 \subsection{Descargar Firmata4CIAA}
 \label{subsec:Descargar Firmata4CIAA}
 
-ejecutas openocd y se lo bajas
-o sea le das make download desde comandos de node
+Cuando el entorno descarga el programa a la EDU-CIAA-NXP, NodeJS se encargará de ejecutar los comandos:
+\begin{itemize}
+	\item make clean.
+	\item make.	
+	\item make download.		
+\end{itemize}
+
+Antes de la descarga de firmata4CIAA, es necesario descargar el firmware de firmata4CIAA.
+
+Ya que la aplicación tiene como alcance que pueda ser ejecutado minimamente en 
+windows o linux, se listan las rutas fijas desde donde debe quedar instalado el firmware:
+
+\begin{itemize}
+	\item Ruta de firware en Windows: C:CIAA/Firmare
+	\item Ruta de firware en Linux: /home/USER/ciaa-ide/Firmware		
+\end{itemize}
+
+De esta manera el servicio de NodeJs buscará las herramientas necesarias (compilador y debugger). 
+
 
 \subsection{GitLab}
 \label{subsec:GitLab}

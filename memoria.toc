@@ -41,13 +41,13 @@
 \contentsline {subsubsection}{Men\IeC {\'u} de visualizaci\IeC {\'o}n}{25}{section*.93}
 \contentsline {section}{\numberline {3.7}Edici\IeC {\'o}n de programa}{26}{section.96}
 \contentsline {section}{\numberline {3.8}Implementaci\IeC {\'o}n}{27}{section.97}
-\contentsline {subsection}{\numberline {3.8.1}Implentaci\IeC {\'o}n de la GUI}{27}{subsection.98}
-\contentsline {subsection}{\numberline {3.8.2}Implentaci\IeC {\'o}n de los Servicios}{28}{subsection.121}
-\contentsline {subsection}{\numberline {3.8.3}Descargar Firmata4CIAA}{29}{subsection.122}
-\contentsline {subsection}{\numberline {3.8.4}GitLab}{29}{subsection.123}
-\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{31}{chapter.124}
-\contentsline {section}{\numberline {4.1}Pruebas funcionales del hardware}{31}{section.125}
-\contentsline {chapter}{\numberline {5}Conclusiones}{33}{chapter.126}
-\contentsline {section}{\numberline {5.1}Conclusiones generales }{33}{section.127}
-\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{33}{section.128}
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{appendix*.129}
+\contentsline {subsection}{\numberline {3.8.1}Implentaci\IeC {\'o}n de la GUI}{27}{subsection.99}
+\contentsline {subsection}{\numberline {3.8.2}Herramientas utilizadas}{29}{subsection.123}
+\contentsline {subsection}{\numberline {3.8.3}Descargar Firmata4CIAA}{31}{subsection.124}
+\contentsline {subsection}{\numberline {3.8.4}GitLab}{31}{subsection.125}
+\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{33}{chapter.126}
+\contentsline {section}{\numberline {4.1}Pruebas funcionales del hardware}{33}{section.127}
+\contentsline {chapter}{\numberline {5}Conclusiones}{35}{chapter.128}
+\contentsline {section}{\numberline {5.1}Conclusiones generales }{35}{section.129}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{35}{section.130}
+\contentsline {chapter}{Bibliograf\'{\i }a}{37}{appendix*.131}
