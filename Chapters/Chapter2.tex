@@ -10,9 +10,7 @@ la planificación para el desarrollo del presente trabajo.
 
 \section{Componentes CIAABOT}
 \label{sec:Componentes CIAABOT}
-La plataforma CIAABOT esta conformada por tres partes fundamentales, tal como se muestra en la figura \ref{fig:componentesCiaabot}. 
-
-A continuación se describirá en detalle cada una de las partes de CIAABOT.
+La plataforma CIAABOT esta conformada por tres partes fundamentales, tal como se muestra en la figura \ref{fig:componentesCiaabot}. Las cuales se detallan en las siguientes secciones.
 
 \begin{figure}[h]
 	\centering
@@ -23,8 +21,8 @@ A continuación se describirá en detalle cada una de las partes de CIAABOT.
 
 \subsection{CIAABOT IDE}
 
-El IDE esta basado en el paradigma reactivo que permite armar programas propios, que pueden ser programas puntuales como manejo de actuadores y motores
-en un sistema embebido, así como también, un prototipado rápido.
+El IDE esta basado en el paradigma reactivo, que permite armar programas propios, que pueden ser programas puntuales como manejo de actuadores y motores
+en un sistema embebido, así como también, prototipado rápido.
 
 El IDE de CIAABOT tiene como componente principal al editor. A partir de allí el usuario puede desarrollar su propio programa gráfico encastrando de manera fácil bloques predefinidos creados en lenguaje javascript, como se observa en la figura \ref{fig:ciaabot-ide-bloques} 
 
@@ -32,7 +30,7 @@ El entorno de desarrollo integrado permite de manera gradual ir comprendiendo co
 
 Dentro del entorno se brinda al usuario una barra de herramientas con funcionalidades
 para crear un nuevo programa, compilarlo, y realizar la descarga del
-código en la placa conectándola por USB.
+código generado a la placa conectándola por USB.
 
 El IDE proporciona al usuario la opción de guardar el programa creado en un
 archivo con extensión .cbp, el cual contiene toda la información del programa
@@ -45,44 +43,42 @@ creado, que podría ser utilizado posteriormente.
 	\label{fig:ciaabot-ide-bloques}
 \end{figure}
 
-La plataforma CIAABOT esta programado usando las siguientes tecnologías:
+La plataforma CIAABOT esta programada usando las siguientes tecnologías:
 
 \begin{itemize}
-	\item Angular\citep{angular}: es una plataforma usada para
+	\item Angular \citep{angular}: es una plataforma usada para
 	desarrollar aplicaciones web en HTML y JavaScript.
-	\item Blockly\citep{blockly}: es una biblioteca que utiliza bloques gráficos encastrables para representar
-    conceptos de código.
-	\item Electrón\citep{electron}: es una biblioteca de código usado para armar aplicaciones de escritorio multiplataforma	utilizando tecnologías web.
-	\item NodeJS\citep{nodejs}: es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google.
-	\item TypeScript\citep{typescript}: es un superconjunto de JavaScript, esencialmente añade tipado estático y objetos basados en clases.
+	\item Blockly \citep{blockly}: es una biblioteca que utiliza bloques gráficos encastrables para representar
+    programas.
+	\item Electrón \citep{electron}: es una biblioteca para armar aplicaciones de escritorio multiplataforma	utilizando tecnologías web.
+	\item NodeJS \citep{nodejs}: es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google.
+	\item TypeScript \citep{typescript}: es un superconjunto de JavaScript, esencialmente añade tipado estático y objetos basados en clases.
 \end{itemize}
 
 El funcionamiento principal en la plataforma CIAABOT es la siguiente:
 
 \begin{itemize}
-	\item Genera el archivo principal: archivo main.c
-	\item Genera el código en C: cada uno de los bloque genera el correspondiente codigo en C y lo inyecta en el archivo main.c del programa.
-	\item Permite la ejecución del compilador de C para el código en la placa.
-	Invoca al OpenOCD.
-	\item Descarga el binario compilado en flash y realiza el reset.
+	\item
+	Diseñar un programa con bloques encastrables. A medida que esto se realiza va generando internamente código C para implementar la misma lógica que describen los bloques.
+	\item
+	Compilar el código C generado a partir de los bloques, utilizando el \emph{toolchain} GNU ARM Embedded \citep{Toolchain}. Este proceso genera un archivo binario.
+	\item
+	Descargar el archivo binario conectándose a la plataforma mediante OpenOCD \citep{openocd} y resetearla para que comience a funcionar.
 \end{itemize}
 
 En la figura \ref{fig:diagrama-ciaabot} se expone el funcionamiento principal de la plataforma CIAABOT.
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.50]{./Figures/diagrama-ciaabot.pdf}
+		\includegraphics[width=14.5cm]{./Figures/CIAABOT_IDE_procesos01.pdf}
 		\par\caption{Diagrama del funcionamiento principal de la plataforma CIAABOT.}\label{fig:diagrama-ciaabot}
 	\end{center}
 \end{figure}
 
-
-
-
 \subsection{CIAABOTS}
 \label{subsec:CIAABOTS}
 
-Se llama CIAABOTS a los robots que se pueden programar utilizando CIAABOT IDE. Estos CIAABOTS tienen un diseño estructural de impresión en 3D, correspondiente al modelo de la placa CIAA. 
+Se denominan CIAABOTS a los robots que se pueden programar utilizando CIAABOT IDE. Estos CIAABOTS tienen un diseño estructural de impresión en 3D, correspondiente al modelo de la placa CIAA. 
 
 Para ser usados por las impresoras 3D, es necesario armar el poncho de diseño abierto y tener los sensores y actuadores del CIAABOT a imprimir.
 
@@ -93,11 +89,11 @@ Debido a que la plataforma CIAABOT esta basada en el firmware v2 \citep{CIAA:fir
 utiliza las siguientes herramientas:
 
 \begin{itemize}
-	\item \emph{Makefile}\citep{makefile}: para la gestión de dependencias, de esta manera puede construir
+	\item \emph{Makefile} \citep{makefile}: para la gestión de dependencias, de esta manera puede construir
 	el software desde sus archivos fuente.	
-	\item \emph{OpenOCD}\citep{openocd}: una herramienta OpenSource, usado para el grabado del firmware
+	\item \emph{OpenOCD} \citep{openocd}: una herramienta OpenSource, usado para el grabado del firmware
 	en las placas.
-	\item \emph{sAPI}\citep{sAPI}: permite manejar los periféricos del microcontrolador de una manera
+	\item \emph{sAPI} \citep{sAPI}: permite manejar los periféricos del microcontrolador de una manera
 	muy sencilla.
 \end{itemize}
 
@@ -108,7 +104,7 @@ utiliza las siguientes herramientas:
 Se plantearon requerimientos que el proyecto debe cumplir a la hora de ser en-
 tregado. Se evaluaron sus posibilidades y se clasificaron en categorías.
 
-\subsection{Requerimientos asociados con el Proyecto CIAABOT}
+\subsection{Requerimientos del entorno de depuración}
 
 \begin{itemize}
 \item
@@ -125,10 +121,9 @@ REQ5: La interfaz gráfica debe seguir los lineamientos de estilo establecidos e
 REQ6: Debe presentar un diseño de interfaz gráfica intuitiva, con elementos similares a los hallados en otras herramientas de depuración.
 \end{itemize}
 
-\subsection{Componentes establecidos en CIAABOT}
+\subsection{Hardware soportado por el entorno a desarrollar}
 
 \begin{itemize}
-	\item El presente proyecto deberá integrarse al entorno gráfico establecido que permita la programación de los robots.	
 	\item Se usará la placa EDU-CIAA-NXP (figura \ref{fig:edu-ciaa-nxp}) para el control de los robots.	
 \end{itemize}
 
@@ -159,16 +154,16 @@ REQ6: Debe presentar un diseño de interfaz gráfica intuitiva, con elementos si
 \section{Planificación}
 \label{sec:ejemplo}
 
-Para lograr los objetivos propuestos, se realizó el desglose en tareas, y se utilizaron las herramientas del diagrama de Activity on-node y gantt donde se esquematiza esas tareas que son parte del trabajo.
+Para lograr los objetivos propuestos, se realizó un desglose en tareas, y se utilizaron las herramientas del diagrama de Activity on-node y gantt donde se esquematiza esas tareas que son parte del trabajo.
 
 \subsection{Desglose en tareas} 
 
 Para alcanzar objetivos concretos, se plantean los entregables para el proyecto:
 
 \begin{itemize}
-	\item Entorno de Debugger.	
+	\item Entorno de \emph{Debugger}.	
 	\item Código fuente del proyecto.
-	\item Actualización del Manual de usuario, mostrando ejemplos didácticos del uso del debugger en la plataforma.
+	\item Actualización del Manual de usuario, mostrando ejemplos didácticos del uso del \emph{debugger} en la plataforma.
 	\item El presente informe final.
 \end{itemize}
 
@@ -189,10 +184,10 @@ la siguiente manera:
 	\item Investigación Preliminar (40 hs.).
 	
 	\begin{itemize}
-		\item Búsqueda de plataformas de robótica educativa existentes, que en su interfaz de desarrollo implemente la herramienta de debugging.
+		\item Búsqueda de plataformas de robótica educativa existentes, que en su interfaz de desarrollo implemente la herramienta de \emph{debugging}.
 		\item Búsqueda de frameworks de JavaScript, para la implementación de las funciones de firmata.
-		\item Búsqueda de información acerca de la ejecución de debugging multiplataforma.
-		\item Búsqueda de intérpretes Javascript para el debugging.
+		\item Búsqueda de información acerca de la ejecución de sesiones de depuación multiplataforma.
+		\item Búsqueda de intérpretes Javascript para el \emph{debugging}.
 		\item Búsqueda de información de mecanismos de ahorro de la flash.
 	\end{itemize}
 
@@ -201,12 +196,12 @@ la siguiente manera:
 	\begin{itemize}
 		\item Selección y pruebas preliminares de la biblioteca firmata para JavaScript.
 		\item Selección y pruebas preliminares del intérprete Javascript.
-		\item Búsqueda de información acerca de la ejecución de debugging multiplataforma.
+		\item Búsqueda de información acerca de la ejecución de \emph{debugging} multiplataforma.
 		\item Selección y pruebas del mecanismo de ahorro de la flash.
-		\item Evaluar la correcta integración entre la aplicación CIAABOT y el debugger.
+		\item Evaluar la correcta integración entre la aplicación CIAABOT y el \emph{debugger}.
 	\end{itemize}
 	
-	\item Desarrollo del Debugger (85 hs.).
+	\item Desarrollo del \emph{Debugger} (85 hs.).
 	
 	\begin{itemize}
 		\item Desarrollo de estructura amigable e intuitiva para su uso.
@@ -228,29 +223,29 @@ la siguiente manera:
 	
 	\begin{itemize}
 		\item Desarrollo para mostrar mensajes en la interacción de los diferentes periféricos de la placa cuando está conectada por interfaz serie.
-		\item Desarrollo de monitoreo en modo debug, de los estados de entradas y salidas a traves de firmata con visualización en la aplicación.
+		\item Desarrollo de monitoreo en modo \emph{debug}, de los estados de entradas y salidas a traves de firmata con visualización en la aplicación.
 	\end{itemize}
 
 	\item Pruebas de Firmware (60 hs.).
 	
 	\begin{itemize}
-		\item Pruebas Unitarias.
-		\item Pruebas de Integración.
+		\item Pruebas unitarias.
+		\item Pruebas de integración.
 		\item Corrección de errores encontrados.
 	\end{itemize}
 
 	\item Integración del Sistema (60 hs.).
 	
 	\begin{itemize}
-		\item Integración de la aplicación Ciaabot para el modo debug.
-		\item Pruebas iniciales de todo el sistema Ciaabot.
+		\item Integración de la aplicación CIAABOT para el modo \emph{debug}.
+		\item Pruebas iniciales de todo el sistema CIAABOT.
 		\item Corrección de errores encontrados.
 	\end{itemize}
 
 	\item Procesos Finales (130 hs.).
 	
 	\begin{itemize}
-		\item Modificar el manual de usuario, agregando el uso del modo debug.
+		\item Modificar el manual de usuario, agregando el uso del modo \emph{debug}.
 		\item Redacción de memoria de trabajo.
 		\item Evaluar el cumplimiento de requerimientos.
 		\item Preparación de la presentación del proyecto.

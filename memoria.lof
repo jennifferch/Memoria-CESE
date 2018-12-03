@@ -6,17 +6,17 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Componentes CIAABOT.\relax }}{5}{figure.caption.21}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Editor gr\IeC {\'a}fico de CIAABOT-IDE.\relax }}{6}{figure.caption.23}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama del funcionamiento principal de la plataforma CIAABOT.\relax }}{7}{figure.caption.24}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{9}{figure.caption.30}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de Node.\relax }}{12}{figure.caption.45}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla de colores diagrama Activity\relax }}{13}{figure.caption.46}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{13}{figure.caption.48}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{8}{figure.caption.30}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de Node.\relax }}{11}{figure.caption.45}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla de colores diagrama Activity\relax }}{12}{figure.caption.46}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{12}{figure.caption.48}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Diagrama de Gantt - Parte 2.\relax }}{13}{figure.caption.49}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{14}{figure.caption.50}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{14}{figure.caption.51}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{13}{figure.caption.50}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{13}{figure.caption.51}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo conceptual.\relax }}{15}{figure.caption.54}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Uso de firmata con la Educiaa.\relax }}{17}{figure.caption.58}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Composici\IeC {\'o}n de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{18}{figure.caption.62}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Dise\IeC {\~n}o de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{18}{figure.caption.62}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Composici\IeC {\'o}n de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{19}{figure.caption.63}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de m\IeC {\'a}quina de estados de los modos de funcionamiento.\relax }}{20}{figure.caption.65}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Estado Donectado.\relax }}{21}{figure.caption.67}
@@ -24,8 +24,8 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Configuraci\IeC {\'o}n de paths.\relax }}{22}{figure.caption.72}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Estado Conectado con Firmata4CIAA.\relax }}{23}{figure.caption.74}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Estado Depurando.\relax }}{24}{figure.caption.76}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Estados de los botones de depuraci\IeC {\'o}n.\relax }}{24}{figure.caption.79}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Herramientas de control de ejecuci\IeC {\'o}n habilitada.\relax }}{24}{figure.caption.80}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Estados del bot\IeC {\'o}n de depuraci\IeC {\'o}n.\relax }}{24}{figure.caption.79}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Herramientas de control de ejecuci\IeC {\'o}n habilitada.\relax }}{25}{figure.caption.80}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Resaltado del flujo de control (Parte 1).\relax }}{26}{figure.caption.83}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Resaltado del flujo de control (Parte 2).\relax }}{26}{figure.caption.84}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Resaltado del flujo de control (Parte 3).\relax }}{26}{figure.caption.85}

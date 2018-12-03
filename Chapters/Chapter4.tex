@@ -16,7 +16,7 @@ Se realizaron pruebas funcionales sobre los requerimientos del proyecto.
 Para comprobar el funcionamiento del entorno de depuración primero se comprobó mediante otro software el correcto acceso a la plataforma de hardware. Para esto se utilizó:
 
 \begin{itemize}
-	\item El programa \emph{Firmata test}\citep{firmataTest}, que permite ensayar desde la PC el funcionamiento de una plataforma que soporte protocolo Firmata. La figura \ref{fig:firmataTest} expone la interfaz gráfica del software libre \emph{Firmata test}.
+	\item El programa \emph{Firmata test} \citep{firmataTest}, permite ensayar desde la PC el funcionamiento de una plataforma que soporte protocolo Firmata. La figura \ref{fig:firmataTest} expone la interfaz gráfica del software libre \emph{Firmata test}.
 	\item La placa EDU-CIAA-NXP corriendo el programa Firmata4CIAA, el cual fue compilado y descargado de forma manual.
 \end{itemize}
 
@@ -36,7 +36,7 @@ Se realizaron pruebas puntuales sobre los sensores y actuadores, demostrando el 
 	\label{fig:MapeoPinesFirmata4CIAAv2}
 \end{figure}
 
-Para la verificación de Firmata de lado del cliente, se realizaron ensayos puntuales sobre la biblioteca \emph{Johnny five}. En la asignatura de Protocolos de Comunicación en Sistemas Embebidos de la CESE FIUBA\citep{CESE} se trabajo de forma puntual sobre el protocolo Firmata, realizando pruebas sobre un software web creado como trabajo final de la asignatura e instalado en la computadora, con el objetivo de ensayar todos los comandos del protocolo cliente sobre periféricos específicos conectados a la placa EDU-CIAA-NXP con Firmata4CIAA, y de esta manera realizar la manipulación de los mismos.  
+Para la verificación de Firmata de lado del cliente, se realizaron ensayos puntuales sobre la biblioteca \emph{Johnny five}. En la asignatura de Protocolos de Comunicación en Sistemas Embebidos de la CESE FIUBA \citep{CESE} se trabajo de forma puntual sobre el protocolo Firmata, realizando pruebas sobre un software web creado como trabajo final de la asignatura e instalado en la computadora, con el objetivo de ensayar todos los comandos del protocolo cliente sobre periféricos específicos conectados a la placa EDU-CIAA-NXP con Firmata4CIAA, y de esta manera realizar la manipulación de los mismos.  
 
 
 \section{Ensayo de funcionamiento en los sistemas operativos Windows y Linux.}
@@ -175,7 +175,7 @@ Flujo principal:
 	El entorno actualiza el menú de visualización de variables con los nombres y valores de esas variables que se encuentran encastradas dentro de los bloques que están ejecutándose. 
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 \subsection{Sesión de depuración uso del comando \emph{Suspender}}
 Pre-condición:
@@ -195,7 +195,7 @@ Flujo principal:
 	El usuario reanuda la ejecución del programa mediante el botón \emph{ejecutar}.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa.
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa.
 
 \subsection{Sesión de depuración uso del comando \emph{Pasar por encima (step over)}}
 Pre-condición:
@@ -216,7 +216,7 @@ Flujo principal:
 	El entorno muestra resaltado el bloque siguiente, ejecuta el bloque que fue resaltado anteriormente y actualiza el valor de las variables en el menú de visualizaciones de variables.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa.  
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa.  
 
 \subsection{Sesión de depuración uso del comando \emph{Pasar adentro (step into)}}
 Pre-condición:
@@ -241,7 +241,7 @@ Flujo principal:
 	El entorno muestra resaltado el bloque siguiente dentro de la función y ejecutara el bloque anterior. 
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa.  
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa.  
 
 \subsection{Sesión de depuración uso del comando \emph{Paso de regreso (step return)}}
 Pre-condición:
@@ -260,7 +260,7 @@ Flujo principal:
 	El entorno ejecuta el bloque seleccionado y los siguientes sin seleccionarlos hasta encontrar el retorno de la función, luego seleccionara el siguiente bloque a continuación de la función que ejecuto.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa.  
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa.  
 
 
 \subsection{Sesión de depuración con puntos de ruptura (\emph{breakpoints})}
@@ -289,7 +289,7 @@ Flujo principal:
     El entorno continuará con la ejecución.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 
 \subsection{Sesión de depuración uso del comando desactivar puntos de interrupción}
@@ -315,7 +315,7 @@ Flujo principal:
 	El entorno muestra el botón de \emph{desactivar puntos de interrupción} habilitado y actualiza el menú de visualización de puntos de ruptura (\emph{breakpoints}) mostrandolos activados nuevamente.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 
 \subsection{Sesión de depuración desactivar puntos de interrupción desde la ventana de visualización de \emph{breakpoints}}
@@ -334,14 +334,14 @@ Flujo principal:
 	\item
 	El usuario hace click en el botón del comando \emph{ejecutar}.
 	\item
-	El entorno ejecuta los bloques de programa sin detenerse cuando encuentra el punto de ruptura en el bloque que fue destildado en la ventana de visualización de puntos de ruptura (\emph{breakpoints}).
+	El entorno ejecuta los bloques de programa sin detenerse cuando encuentra el punto de ruptura en el bloque que fue destildado en la ventana de visualización de puntos de ruptura.
 	\item
 	El usuario hace click en el \emph{checklist} actualmente destildado dentro del menú de visualización de puntos de ruptura (\emph{breakpoints}) de la columna "Activo".
 	\item
-	El entorno ejecuta los bloques de programa y se detiene cuando encuentra el punto de ruptura en el bloque que fue tildado como activo desde la ventana de visualización de puntos de ruptura (\emph{breakpoints}).
+	El entorno ejecuta los bloques de programa y se detiene cuando encuentra el punto de ruptura en el bloque que fue tildado como activo desde la ventana de visualización de puntos de ruptura.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 
 \subsection{Sesión de depuración uso del comando \emph{Detener depuración}}
@@ -360,7 +360,7 @@ El entorno se encuentra con una sesión de depuración iniciada (se comprueban l
 	El entorno termina la ejecución del programa, finaliza la sesión de depuración, cambia el botón de \emph{debug} de color naranja a color verde y por ultimo habilita la edición del programa.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 \subsection{Guardado y restauración de los puntos de ruptura}
 Pre-condición:
@@ -374,7 +374,7 @@ Pre-condición:
 Flujo principal:
 \begin{enumerate}
     \item
-	El usuario hace click en cualquiera de los bloques gráficos que se muestran dentro del editor.
+	El usuario hace click derecho en cualquiera de los bloques gráficos que se muestran dentro del editor.
 	\item
 	El entorno muestra el menú contextual del bloque desde donde se puede establecer el punto de interrupción.
 	\item
@@ -398,7 +398,7 @@ Flujo principal:
 	
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa. 
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa. 
 
 
 \section{Ensayos de edición de programas en lenguaje CIAABOT.}
@@ -435,7 +435,7 @@ Flujo principal:
 	El usuario comprueba que el bloque gráfico agregado en el punto anterior se encuentre en el programa cargado.
 \end{enumerate}
 
-Resultado obtenido: ejecución de todos los pasos del \emph{Test} en forma exitosa.
+Resultado obtenido: ejecución de todos los pasos del \emph{test} en forma exitosa.
 
 
 \section{Ensayos de interfaz de usuario.}
@@ -453,4 +453,4 @@ Como parte de la verificación en los estilos visuales del diseño de la interfa
 \section{Validación con usuarios.}
 \label{sec:Validación con usuarios.}
 
-Para verificar el requerimiento “\emph{REQ6: Debe presentar un diseño de interfaz gráfica intuitiva, con elementos similares a los hallados en otras herramientas de depuración}” se realizaron ensayos de los usuarios finales en el laboratorio de programación llevado a cabo en la materia “\emph{Computadores 2 / Técnicas Avanzadas de Programación UNQ 2018}”\citep{computadores2unq2018} de la Universidad nacional de Quilmes. Los usuarios con experiencia de depuración en lenguaje C pudieron utilizar el entorno sin necesidad de algún soporte en la utilización de la herramienta de comandos para depuración que ofrece la plataforma, siendo esto prueba que el diseño de interfaz gráfica es intuitiva y de fácil uso.
+Para verificar el requerimiento “\emph{REQ6: Debe presentar un diseño de interfaz gráfica intuitiva, con elementos similares a los hallados en otras herramientas de depuración}” se realizaron ensayos de los usuarios finales en el marco de un laboratorio de programación llevado a cabo en la materia “\emph{Computadores 2 / Técnicas Avanzadas de Programación UNQ 2018}” \citep{computadores2unq2018} de la Universidad nacional de Quilmes. Los usuarios con experiencia de depuración en lenguaje C pudieron utilizar el entorno sin necesidad de algún soporte en la utilización de la herramienta de comandos para depuración que ofrece la plataforma, siendo esto prueba que el diseño de interfaz gráfica es intuitiva y de fácil uso.

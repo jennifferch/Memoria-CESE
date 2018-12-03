@@ -26,13 +26,11 @@ los motivos que llevaron a realizarlo, cuáles son los objetivos y el alcance.
 \section{Introducción}
 \label{Introducción}
 En el presente trabajo se describe la implementación de un \emph{debugger} interactivo
-para CIAABOT IDE (IDE son las siglas en inglés de entorno de desarrollo integrado). CIAABOT es una plataforma de software y hardware abierto que forma parte del proyecto CIAA (Computadora Industrial Abierta Argentina)\citep{CIAA}. 
+para CIAABOT IDE (IDE son las siglas en inglés de entorno de desarrollo integrado). CIAABOT es una plataforma de software y hardware abierto que forma parte del proyecto CIAA (Computadora Industrial Abierta Argentina) \citep{CIAA}. 
 
 
 La implementacion de este trabajo tiene la misión de contribuir a la formación
-académica de los alumnos, así como también brindar un aporte al proyecto CIAA.
-De esta manera se desarrolla el presente proyecto para que los usuarios que se encuentren
-realizando sus desarrollos de programas en CIAABOT IDE tengan también como alternativa la depuración.
+académica de los alumnos, así como también brindar un aporte al proyecto CIAA, mediante el agregado de capacidad de depuración a los programas desarrollados con CIAABOT IDE.
 
 En la sección \ref{CIAABOT} se introduce el proyecto CIAABOT y las partes que lo componen; también se listan los pasos que son parte del flujo de trabajo en el IDE.
 En la sección \ref{Debug y Debugger} se exponen los conceptos involucrados en el contexto del desarrollo del presente proyecto, y en la sección \ref{Motivación} se introducen los motivos que llevaron a realizarse. Por último, en la sección \ref{Objetivos y alcance} se presentan los objetivos propuestos y el alcance.
@@ -47,7 +45,7 @@ de forma sencilla la programación de robots.
 Las partes componentes que lo integran son:
 
 \begin{itemize}
-	\item CIAABOT IDE: es un entorno de programación en lenguaje CIAABOT (basado en  Blockly\citep{blockly}), que es un lenguaje gráfico donde un programa se crea encastrando bloques. Permite crear el programa, compilarlo y descargarlo a las plataformas de hardware.
+	\item CIAABOT IDE: es un entorno de programación en lenguaje CIAABOT (basado en  Blockly \citep{blockly}), que es un lenguaje gráfico donde un programa se crea encastrando bloques. Permite crear el programa, compilarlo y descargarlo a las plataformas de hardware.
 	\item CIAABOTS: son las plataformas de hardware que se programan desde CIAABOT IDE. 
 	\item Firmware: el programa creado en CIAABOT IDE genera internamente código C que se combina con el firmare pre-existente del proyecto CIAA y se compila para su posterior descarga a la plataforma.
 \end{itemize}
@@ -55,7 +53,7 @@ Las partes componentes que lo integran son:
 Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flujo de trabajo, las cuales son:
 
 \begin{enumerate}
-	\item Armar un programa con los bloques: encastrando bloques predifinidos por
+	\item Armar un programa: encastrando bloques predifinidos por
 	la plataforma.	
 	\item Visualizar el código generado en C: actualizado en tiempo real cuando se
 	manipulan los bloques.
@@ -75,7 +73,7 @@ Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flu
 \subsection{\emph{Debug} y \emph{Debugger}}
 \label{Debug y Debugger}
 
-El depurador es un programa que ejecuta ciertas rutinas de código de otros programas (programa objetivo), con el fin de encontrar y eliminar errores de ejecución. Esta técnica permite al código ser examinado y obtener información sobre el estado en el que se está ejecutando.
+El depurador es un programa que ejecuta ciertas rutinas de código de otros programas (programa objetivo), con el fin de encontrar y eliminar errores. Esta técnica permite al código ser examinado y obtener información sobre el estado en el que se está ejecutando.
 
 Mediante el proceso de depuración de programas, se puede identificar y corregir errores propios de programación, corriendo un programa paso a paso, parandolo o pausandolo, de esta manera se realiza el seguimiento de
 valores de las variables, dando en consecuencia la posibilidad al programador
@@ -85,12 +83,6 @@ Como el software en general y los sistemas electrónicos se vuelven generalmente
 más complejos, se da importancia al desarrollo de técnicas y herramientas de depuración,
 precisamente por las ventajas que tiene, como son el detectar anomalías
 en cada paso, corregir y mejorar las funcionalidades. 
-
-La mayoría de las computadoras modernas tienen el soporte de su hardware para
-realizar la depuración, en el caso de la EDU-CIAA-NXP cuenta con un puerto USB
-para realizar la depuración de un programa en el microcontrolador. El \emph{debugger}
-utilizado en el IDE-Eclipse puede realizar la depuración conectándose al puerto
-USB.
 
 %----------------------------------------------------------------------------------------
 
@@ -123,15 +115,15 @@ la plataforma CIAABOT. Para lograrlo se pretende desarrollar un \emph{debugger} 
 CIAABOT que cumpla con las siguientes características: 
 
 \begin{itemize}
-	\item Ejecutar un programa línea a línea.
+	\item Ejecutar un programa bloque por bloque.
 	\item Detener la ejecución temporalmente en un bloque encastrable concreto.
 	\item Visualizar el contenido de las variables en un determinado momento de la
 	ejecución.
-	\item Entorno gráfico amigable, tooltips con valores sobre el código.
+	\item Entorno gráfico amigable.
 	\item Importar el programa de bloques creado en el IDE de desarrollo de CIAABOT.	
 \end{itemize}
 
-De esta manera el aprendizaje del usuario programador primerizo será didáctica,
+De esta manera el aprendizaje del usuario programador primerizo será más enriquesedor,
 identificando y subsanando los errores de ejecución.
 
 %----------------------------------------------------------------------------------------

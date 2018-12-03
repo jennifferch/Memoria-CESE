@@ -91,6 +91,45 @@
     \endverb
   \endentry
 
+  \entry{Toolchain}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={{ARM}},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Disponible: 2018-11-29}
+    \field{title}{GNU ARM Embedded Toolchain, herramientas para compilación
+  cruzada para procesadores Arm Cortex-M y Cortex-R. Incluye Arm Embedded GCC
+  compiler, bibliotecas y otras herramientas GNU necesarias}
+    \verb{url}
+    \verb https://developer.arm.com/open-source/gnu-toolchain/gnu-rm
+    \endverb
+  \endentry
+
+  \entry{openocd}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=D}{%
+         family={{Dominic Rath}},
+         familyi={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{D1}
+    \strng{fullhash}{D1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Disponible: 2018-11-29}
+    \field{title}{Open On-Chip Debugger, herramienta para depuración,
+  programación y boundary-scan para sistemas embebidos}
+    \verb{url}
+    \verb http://openocd.org/
+    \endverb
+  \endentry
+
   \entry{CIAA:firmwarev2}{misc}{}
     \field{labeltitlesource}{title}
     \field{title}{CIAA Firmware v2}
@@ -105,14 +144,6 @@
     \field{title}{Sitio web de referencia}
     \verb{url}
     \verb https://cmake.org/
-    \endverb
-  \endentry
-
-  \entry{openocd}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Sitio web de OpenOCD}
-    \verb{url}
-    \verb http://openocd.org/
     \endverb
   \endentry
 

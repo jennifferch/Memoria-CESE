@@ -12,11 +12,11 @@
 \contentsline {subsection}{\numberline {2.1.1}CIAABOT IDE}{5}{subsection.22}
 \contentsline {subsection}{\numberline {2.1.2}CIAABOTS}{7}{subsection.25}
 \contentsline {subsection}{\numberline {2.1.3}Firmware}{7}{subsection.26}
-\contentsline {section}{\numberline {2.2}Requerimientos}{8}{section.27}
-\contentsline {subsection}{\numberline {2.2.1}Requerimientos asociados con el Proyecto CIAABOT}{8}{subsection.28}
-\contentsline {subsection}{\numberline {2.2.2}Componentes establecidos en CIAABOT}{8}{subsection.29}
+\contentsline {section}{\numberline {2.2}Requerimientos}{7}{section.27}
+\contentsline {subsection}{\numberline {2.2.1}Requerimientos del entorno de depuraci\IeC {\'o}n}{8}{subsection.28}
+\contentsline {subsection}{\numberline {2.2.2}Hardware soportado por el entorno a desarrollar}{8}{subsection.29}
 \contentsline {subsection}{\numberline {2.2.3}Firmware}{8}{subsection.31}
-\contentsline {subsection}{\numberline {2.2.4}Procesos Finales}{8}{subsection.32}
+\contentsline {subsection}{\numberline {2.2.4}Procesos Finales}{9}{subsection.32}
 \contentsline {section}{\numberline {2.3}Planificaci\IeC {\'o}n}{9}{section.33}
 \contentsline {subsection}{\numberline {2.3.1}Desglose en tareas}{9}{subsection.34}
 \contentsline {subsection}{\numberline {2.3.2}Activity On-node}{11}{subsection.44}
@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.2}Caso de estudio: depuraci\IeC {\'o}n con eclipse}{15}{section.55}
 \contentsline {subsection}{\numberline {3.2.1}Firmata}{16}{subsection.57}
 \contentsline {section}{\numberline {3.3}Sistema para depuraci\IeC {\'o}n propuesto}{17}{section.59}
-\contentsline {section}{\numberline {3.4}Caracter\IeC {\'\i }sticas del entorno \emph {CIAABOT Debug}}{17}{section.60}
+\contentsline {section}{\numberline {3.4}Caracter\IeC {\'\i }sticas del entorno \emph {CIAABOT Debug}}{18}{section.60}
 \contentsline {section}{\numberline {3.5}Interfaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}}{18}{section.61}
 \contentsline {section}{\numberline {3.6}M\IeC {\'a}quina de estados de \emph {CIAABOT Debug}}{19}{section.64}
 \contentsline {subsection}{\numberline {3.6.1}Desconectado}{19}{subsection.66}
@@ -44,7 +44,7 @@
 \contentsline {subsection}{\numberline {3.9.1}Implentaci\IeC {\'o}n de la GUI}{29}{subsection.96}
 \contentsline {subsection}{\numberline {3.9.2}Herramientas utilizadas}{32}{subsection.120}
 \contentsline {subsection}{\numberline {3.9.3}Archivo de estado de \emph {CIAABOT Debug}}{33}{subsection.121}
-\contentsline {subsection}{\numberline {3.9.4}GitLab}{34}{subsection.152}
+\contentsline {subsection}{\numberline {3.9.4}GitLab}{33}{subsection.152}
 \contentsline {chapter}{\numberline {4}Ensayos y Resultados}{35}{chapter.153}
 \contentsline {section}{\numberline {4.1}Ensayos preliminares sobre acerca del control de la plataforma mediante protocolo Firmata.}{35}{section.154}
 \contentsline {section}{\numberline {4.2}Ensayo de funcionamiento en los sistemas operativos Windows y Linux.}{35}{section.157}
@@ -71,5 +71,5 @@
 \contentsline {section}{\numberline {4.6}Validaci\IeC {\'o}n con usuarios.}{46}{section.259}
 \contentsline {chapter}{\numberline {5}Conclusiones}{47}{chapter.260}
 \contentsline {section}{\numberline {5.1}Conclusiones generales }{47}{section.261}
-\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{47}{section.262}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{48}{section.262}
 \contentsline {chapter}{Bibliograf\'{\i }a}{49}{appendix*.263}
