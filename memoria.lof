@@ -1,46 +1,46 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \IeC {\'A}rea de flujo de trabajo de CIAABOT-IDE.\relax }}{2}{figure.caption.15}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \IeC {\'A}rea de flujo de trabajo de CIAABOT-IDE.\relax }}{2}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Componentes CIAABOT.\relax }}{5}{figure.caption.21}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Editor gr\IeC {\'a}fico de CIAABOT-IDE.\relax }}{6}{figure.caption.23}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama del funcionamiento principal de la plataforma CIAABOT.\relax }}{7}{figure.caption.24}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{8}{figure.caption.30}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de Node.\relax }}{11}{figure.caption.45}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla de colores diagrama Activity\relax }}{12}{figure.caption.46}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{12}{figure.caption.48}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagrama de Gantt - Parte 2.\relax }}{13}{figure.caption.49}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{13}{figure.caption.50}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{13}{figure.caption.51}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Componentes CIAABOT.\relax }}{5}{figure.caption.20}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Editor gr\IeC {\'a}fico de CIAABOT-IDE.\relax }}{6}{figure.caption.22}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama del funcionamiento principal de la plataforma CIAABOT.\relax }}{7}{figure.caption.23}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Placa EDU-CIAA-NXP\relax }}{8}{figure.caption.29}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de Node.\relax }}{11}{figure.caption.44}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tabla de colores diagrama Activity\relax }}{12}{figure.caption.45}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagrama de Gantt - Parte 1.\relax }}{12}{figure.caption.47}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagrama de Gantt - Parte 2.\relax }}{13}{figure.caption.48}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de Gantt - Parte 3.\relax }}{13}{figure.caption.49}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama de Gantt - Parte 4.\relax }}{13}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo conceptual.\relax }}{15}{figure.caption.54}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Uso de firmata con la Educiaa.\relax }}{17}{figure.caption.58}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Dise\IeC {\~n}o de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{18}{figure.caption.62}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Composici\IeC {\'o}n de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{19}{figure.caption.63}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de m\IeC {\'a}quina de estados de los modos de funcionamiento.\relax }}{20}{figure.caption.65}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Estado Donectado.\relax }}{21}{figure.caption.67}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Descargar Firmata4CIAA.\relax }}{21}{figure.caption.70}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Configuraci\IeC {\'o}n de paths.\relax }}{22}{figure.caption.72}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Estado Conectado con Firmata4CIAA.\relax }}{23}{figure.caption.74}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Estado Depurando.\relax }}{24}{figure.caption.76}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Estados del bot\IeC {\'o}n de depuraci\IeC {\'o}n.\relax }}{24}{figure.caption.79}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Herramientas de control de ejecuci\IeC {\'o}n habilitada.\relax }}{25}{figure.caption.80}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Resaltado del flujo de control (Parte 1).\relax }}{26}{figure.caption.83}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Resaltado del flujo de control (Parte 2).\relax }}{26}{figure.caption.84}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Resaltado del flujo de control (Parte 3).\relax }}{26}{figure.caption.85}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Establecer una bandera de punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.86}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.87}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Quitar Punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.88}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Desactivar los Puntos de interrupci\IeC {\'o}n activos.\relax }}{27}{figure.caption.89}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Men\IeC {\'u} de visualizaci\IeC {\'o}n de variables.\relax }}{28}{figure.caption.91}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Ventana de Puntos de ruptura (\emph {breakpoints}).\relax }}{28}{figure.caption.92}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Di\IeC {\'a}grama de Bloques para el manejo de los perif\IeC {\'e}ricos.\relax }}{29}{figure.caption.95}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Ejemplo de c\IeC {\'o}digo en bloques para el barrido de un servo.\relax }}{30}{figure.caption.97}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Barrido de servomotor ejecutado con johnny five\relax }}{30}{figure.caption.106}
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Ejemplo de wait\relax }}{30}{figure.caption.112}
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de secuencia.\relax }}{31}{figure.caption.119}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo conceptual.\relax }}{15}{figure.caption.53}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Uso de firmata con la Educiaa.\relax }}{17}{figure.caption.57}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Dise\IeC {\~n}o de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{18}{figure.caption.61}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Composici\IeC {\'o}n de la intergaz gr\IeC {\'a}fica de \emph {CIAABOT Debug}.\relax }}{19}{figure.caption.62}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de m\IeC {\'a}quina de estados de los modos de funcionamiento.\relax }}{20}{figure.caption.64}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Estado Desconectado.\relax }}{21}{figure.caption.66}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Descargar Firmata4CIAA.\relax }}{22}{figure.caption.69}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Configuraci\IeC {\'o}n de paths.\relax }}{22}{figure.caption.71}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Estado Conectado con Firmata4CIAA.\relax }}{23}{figure.caption.73}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Estado Depurando.\relax }}{24}{figure.caption.75}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Estados del bot\IeC {\'o}n de depuraci\IeC {\'o}n.\relax }}{24}{figure.caption.78}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Herramientas de control de ejecuci\IeC {\'o}n habilitada.\relax }}{25}{figure.caption.79}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Resaltado del flujo de control (Parte 1).\relax }}{26}{figure.caption.82}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Resaltado del flujo de control (Parte 2).\relax }}{26}{figure.caption.83}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Resaltado del flujo de control (Parte 3).\relax }}{26}{figure.caption.84}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Establecer una bandera de punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.85}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.86}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Quitar Punto de interrupci\IeC {\'o}n.\relax }}{27}{figure.caption.87}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Desactivar los Puntos de interrupci\IeC {\'o}n activos.\relax }}{27}{figure.caption.88}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Men\IeC {\'u} de visualizaci\IeC {\'o}n de variables.\relax }}{28}{figure.caption.90}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Ventana de Puntos de ruptura (\emph {breakpoints}).\relax }}{28}{figure.caption.91}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Di\IeC {\'a}grama de Bloques para el manejo de los perif\IeC {\'e}ricos.\relax }}{29}{figure.caption.94}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Ejemplo de c\IeC {\'o}digo en bloques para el barrido de un servo.\relax }}{30}{figure.caption.96}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Barrido de servomotor ejecutado con johnny five\relax }}{30}{figure.caption.105}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Ejemplo de wait\relax }}{30}{figure.caption.111}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de secuencia.\relax }}{31}{figure.caption.118}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Programa Firmata test\relax }}{36}{figure.caption.155}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Firmata4CIAA\relax }}{37}{figure.caption.156}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Programa Firmata test\relax }}{36}{figure.caption.154}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Firmata4CIAA\relax }}{37}{figure.caption.155}
 \addvspace {10\p@ }
