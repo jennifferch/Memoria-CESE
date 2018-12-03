@@ -5,7 +5,7 @@
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \label{IntroGeneral}
 En este capítulo se presenta una breve introdución a la plataforma CIAABOT, y se
-indica la necesidad que dio origen a desarrollar este proyecto. También se detallan
+explica la necesidad que dio origen a desarrollar este proyecto. También se detallan
 los motivos que llevaron a realizarlo, cuáles son los objetivos y el alcance.
 
 %----------------------------------------------------------------------------------------
@@ -26,15 +26,13 @@ los motivos que llevaron a realizarlo, cuáles son los objetivos y el alcance.
 \section{Introducción}
 \label{Introducción}
 En el presente trabajo se describe la implementación de un \emph{debugger} interactivo
-para CIAABOT IDE\footnote{IDE son las siglas en inglés de entorno de desarrollo integrado.}.
-
-CIAABOT es una plataforma de software y hardware abierto que forma parte del proyecto CIAA (Computadora Industrial Abierta Argentina)\citep{CIAA}. 
+para CIAABOT IDE (IDE son las siglas en inglés de entorno de desarrollo integrado). CIAABOT es una plataforma de software y hardware abierto que forma parte del proyecto CIAA (Computadora Industrial Abierta Argentina)\citep{CIAA}. 
 
 
 La implementacion de este trabajo tiene la misión de contribuir a la formación
 académica de los alumnos, así como también brindar un aporte al proyecto CIAA.
 De esta manera se desarrolla el presente proyecto para que los usuarios que se encuentren
-realizando sus desarrollos de programas en CIAABOT IDE, tengan también, como alternativa la depuración.
+realizando sus desarrollos de programas en CIAABOT IDE tengan también como alternativa la depuración.
 
 En la sección \ref{CIAABOT} se introduce el proyecto CIAABOT y las partes que lo componen; también se listan los pasos que son parte del flujo de trabajo en el IDE.
 En la sección \ref{Debug y Debugger} se exponen los conceptos involucrados en el contexto del desarrollo del presente proyecto, y en la sección \ref{Motivación} se introducen los motivos que llevaron a realizarse. Por último, en la sección \ref{Objetivos y alcance} se presentan los objetivos propuestos y el alcance.
@@ -69,19 +67,19 @@ Se observa en la figura \ref{fig:editor} el área en dónde se desarrolla el flu
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.50]{./Figures/editor.jpg}
-	\caption{Área de flujo de trabajo de CIAABOT-IDE. Recuperado de \url{https://laboratorios.fi.uba.ar}}
+	\includegraphics[scale=.50]{./Figures/editor.PNG}
+	\caption{Área de flujo de trabajo de CIAABOT-IDE.}
 	\label{fig:editor}
 \end{figure}
 
 \subsection{\emph{Debug} y \emph{Debugger}}
 \label{Debug y Debugger}
 
-La depuración es un programa que ejecuta ciertas rutinas de código de otros programas (programa objetivo), con el fin de encontrar y eliminar errores de ejecución. Esta técnica permite al código ser examinado obteniendo información muy importante sobre el estado en el que se está ejecutando.
+El depurador es un programa que ejecuta ciertas rutinas de código de otros programas (programa objetivo), con el fin de encontrar y eliminar errores de ejecución. Esta técnica permite al código ser examinado y obtener información sobre el estado en el que se está ejecutando.
 
 Mediante el proceso de depuración de programas, se puede identificar y corregir errores propios de programación, corriendo un programa paso a paso, parandolo o pausandolo, de esta manera se realiza el seguimiento de
 valores de las variables, dando en consecuencia la posibilidad al programador
-de corregir errores y pulir el funcionamiento.
+de corregir errores y pulir el funcionamiento de su programa.
 
 Como el software en general y los sistemas electrónicos se vuelven generalmente
 más complejos, se da importancia al desarrollo de técnicas y herramientas de depuración,
@@ -99,18 +97,18 @@ USB.
 \section{Motivación}
 \label{Motivación}
 
-La plataforma CIAABOT no posee ninguna forma que permita \emph{debuggear} un programa.
+La plataforma CIAABOT no posee la capacidad de \emph{debuggear} un programa.
 Para realizar los ensayos se tiene que compilar el programa, descargalo y luego manualmente probar la lógica en la placa usando, como por ejemplo, los leds, botones, mensajes por UART, etc.
 
-Se plantea el desarrollo de un \emph{debugger} interactivo para CIAABOT, debido a la
-importancia de realizar pruebas de un programa en tiempo real, y de esta manera verificar la lógica del programa.
+Se plantea el desarrollo de un \emph{debugger} interactivo para CIAABOT debido a la
+importancia de realizar pruebas de un programa en tiempo real y de esta manera verificar la lógica del programa.
 
-El desarrollo del \emph{debugger} interactivo para CIAABOT, seguirá los lineamientos
-de diseño de CIAABOT, implementando el desarrollo con una visión de
+El desarrollo del \emph{debugger} interactivo para CIAABOT seguirá los lineamientos
+de diseño de CIAABOT implementando el desarrollo con una visión de
 fácil utilización, simple e intuitivo, teniendo en cuenta quienes serán los usuarios
 finales.
 
-Se aprovechará con el desarrollo de esta implementacion poder aplicar todos los
+Se aprovechará con el desarrollo de esta implementación poder aplicar todos los
 conocimientos aprendidos durante la carrera de especialización de sistemas embebidos.
 
 

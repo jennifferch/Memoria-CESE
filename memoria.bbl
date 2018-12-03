@@ -16,36 +16,24 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{CIAA:firmwarev2}{misc}{}
+\datalist[entry]{none/global//global/global}
+  \entry{CIAA}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=P}{%
+         family={{Proyecto CIAA}},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P1}
+    \strng{fullhash}{P1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \field{title}{CIAA Firmware v2}
+    \field{note}{Disponible: 2016-06-25}
+    \field{title}{Computadora Industrial Abierta Argentina}
     \verb{url}
-    \verb https://github.com/ciaa/firmware_v2
+    \verb http://proyecto-ciaa.com.ar/devwiki/doku.php?id=start
     \endverb
-    \field{year}{2016}
-  \endentry
-
-  \entry{angular}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{title}{Documentación de Angular}
-    \verb{url}
-    \verb https://angular.io/docs
-    \endverb
-  \endentry
-
-  \entry{typescript}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{title}{Documentación de TypeScript}
-    \verb{url}
-    \verb https://www.typescriptlang.org
-    \endverb
+    \field{year}{2014}
   \endentry
 
   \entry{blockly}{misc}{}
@@ -61,8 +49,6 @@
     \strng{fullhash}{FN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
     \field{abstract}{%
     Biblioteca de JavaScript del lado del cliente para crear lenguajes de
   programación de bloque visual y editores.%
@@ -70,6 +56,98 @@
     \field{title}{Documentación de Blockly}
     \verb{url}
     \verb https://developers.google.com/blockly/
+    \endverb
+  \endentry
+
+  \entry{angular}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Documentación de Angular}
+    \verb{url}
+    \verb https://angular.io/docs
+    \endverb
+  \endentry
+
+  \entry{electron}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sobre Electron}
+    \verb{url}
+    \verb https://electron.atom.io/docs/tutorial/about/
+    \endverb
+  \endentry
+
+  \entry{nodejs}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sobre NodeJS}
+    \verb{url}
+    \verb https://nodejs.org/en/about/
+    \endverb
+  \endentry
+
+  \entry{typescript}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Documentación de TypeScript}
+    \verb{url}
+    \verb https://www.typescriptlang.org
+    \endverb
+  \endentry
+
+  \entry{CIAA:firmwarev2}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{CIAA Firmware v2}
+    \verb{url}
+    \verb https://github.com/ciaa/firmware_v2
+    \endverb
+    \field{year}{2016}
+  \endentry
+
+  \entry{makefile}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sitio web de referencia}
+    \verb{url}
+    \verb https://cmake.org/
+    \endverb
+  \endentry
+
+  \entry{openocd}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sitio web de OpenOCD}
+    \verb{url}
+    \verb http://openocd.org/
+    \endverb
+  \endentry
+
+  \entry{sAPI}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{sAPI}
+    \verb{url}
+    \verb https://github.com/epernia/sAPI
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{bootstrap}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=yJTdTMO}{%
+         prefix={y\bibnamedelima Jacob Thornton\bibnamedelima de},
+         prefixi={y\bibinitperiod\bibinitdelim J\bibinitperiod
+  T\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Twitter},
+         familyi={T\bibinitperiod},
+         given={Mark\bibnamedelima Otto},
+         giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TMOyJTd1}
+    \strng{fullhash}{TMOyJTd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Biblioteca multiplataforma o conjunto de herramientas de código abierto
+  para diseño de sitios y aplicaciones web.%
+    }
+    \field{title}{Repositorio de Bootstrap}
+    \verb{url}
+    \verb https://github.com/twbs/bootstrap
     \endverb
   \endentry
 
@@ -86,8 +164,6 @@
     \strng{fullhash}{FN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
     \field{abstract}{%
     Intérprete escrito en JavaScript, de código abierto.%
     }
@@ -110,86 +186,12 @@
     \strng{fullhash}{HM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
     \field{abstract}{%
     Publicada bajo una licencia MIT.%
     }
     \field{title}{Repositorio de Acorn}
     \verb{url}
     \verb https://github.com/acornjs/acorn
-    \endverb
-  \endentry
-
-  \entry{signals}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=PR}{%
-         family={Penner's},
-         familyi={P\bibinitperiod},
-         given={Robert},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PR1}
-    \strng{fullhash}{PR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \field{title}{Repositorio de Signals}
-    \verb{url}
-    \verb https://github.com/millermedeiros/js-signals
-    \endverb
-  \endentry
-
-  \entry{CIAA}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=P}{%
-         family={{Proyecto CIAA}},
-         familyi={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{P1}
-    \strng{fullhash}{P1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \field{note}{Disponible: 2016-06-25}
-    \field{title}{Computadora Industrial Abierta Argentina}
-    \verb{url}
-    \verb http://proyecto-ciaa.com.ar/devwiki/doku.php?id=start
-    \endverb
-    \field{year}{2014}
-  \endentry
-
-  \entry{express}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Repositorio de Express}
-    \verb{url}
-    \verb https://github.com/expressjs/express
-    \endverb
-  \endentry
-
-  \entry{johnny}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Repositorio de Johnny five}
-    \verb{url}
-    \verb https://github.com/rwaldron/johnny-five
-    \endverb
-  \endentry
-
-  \entry{serialport}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Repositorio de Serialport}
-    \verb{url}
-    \verb https://github.com/node-serialport/node-serialport
     \endverb
   \endentry
 
@@ -206,70 +208,85 @@
     \strng{fullhash}{RJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
     \field{title}{Repositorio de Jquery}
     \verb{url}
     \verb https://github.com/jquery/jquery
     \endverb
   \endentry
 
-  \entry{sAPI}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{title}{sAPI}
-    \verb{url}
-    \verb https://github.com/epernia/sAPI
-    \endverb
-    \field{year}{2017}
-  \endentry
-
-  \entry{electron}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{title}{Sobre Electron}
-    \verb{url}
-    \verb https://electron.atom.io/docs/tutorial/about/
-    \endverb
-  \endentry
-
-  \entry{nodejs}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{title}{Sobre NodeJS}
-    \verb{url}
-    \verb https://nodejs.org/en/about/
-    \endverb
-  \endentry
-
-  \entry{bootstrap}{misc}{}
+  \entry{signals}{misc}{}
     \name{author}{1}{}{%
-      {{hash=yJTdTMO}{%
-         prefix={y\bibnamedelima Jacob Thornton\bibnamedelima de},
-         prefixi={y\bibinitperiod\bibinitdelim J\bibinitperiod
-  T\bibinitperiod\bibinitdelim d\bibinitperiod},
-         family={Twitter},
-         familyi={T\bibinitperiod},
-         given={Mark\bibnamedelima Otto},
-         giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+      {{hash=PR}{%
+         family={Penner's},
+         familyi={P\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
       }}%
     }
-    \strng{namehash}{TMOyJTd1}
-    \strng{fullhash}{TMOyJTd1}
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{abstract}{%
-    Biblioteca multiplataforma o conjunto de herramientas de código abierto
-  para diseño de sitios y aplicaciones web.%
-    }
-    \field{title}{Repositorio de Bootstrap}
+    \field{title}{Repositorio de Signals}
     \verb{url}
-    \verb https://github.com/twbs/bootstrap
+    \verb https://github.com/millermedeiros/js-signals
+    \endverb
+  \endentry
+
+  \entry{johnny}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Repositorio de Johnny five}
+    \verb{url}
+    \verb https://github.com/rwaldron/johnny-five
+    \endverb
+  \endentry
+
+  \entry{express}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Repositorio de Express}
+    \verb{url}
+    \verb https://github.com/expressjs/express
+    \endverb
+  \endentry
+
+  \entry{serialport}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Repositorio de Serialport}
+    \verb{url}
+    \verb https://github.com/node-serialport/node-serialport
+    \endverb
+  \endentry
+
+  \entry{json}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sitio web oficial de Json}
+    \verb{url}
+    \verb https://www.json.org
+    \endverb
+  \endentry
+
+  \entry{firmataTest}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Sitio web de referencia}
+    \verb{url}
+    \verb http://firmata.org/
+    \endverb
+  \endentry
+
+  \entry{CESE}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Carrera de Especialización en Sistemas Embebidos (CESE) de
+  la UBA}
+    \verb{url}
+    \verb http://laboratorios.fi.uba.ar/lse/especializacion.html
+    \endverb
+  \endentry
+
+  \entry{computadores2unq2018}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Computadores 2/Técnicas avanzadas de programación}
+    \verb{url}
+    \verb https://sites.google.com/site/computadores2unq2018/
     \endverb
   \endentry
 \enddatalist

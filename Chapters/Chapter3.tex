@@ -34,8 +34,7 @@
   morecomment=[s]{/*}{*/}%
 }
 
-En este capítulo se expone el diseño e implementación del software para depurar programas en lenguaje CIAABOT. Se
-presenta el funcionamiento para depuración de programas en C mediante eclipse como caso de estudio, sobre la cual se propone la alternativa de diseño elegida.
+En este capítulo se presenta como caso de estudio el funcionamiento del software de depuración para programas en C mediante eclipse y se describe en detalle el desarrollo del diseño e implementación del sistema para depuración elegido. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -62,14 +61,12 @@ Para diseñar el software de depuración se toma como caso de estudio la depurac
 \begin{itemize}
 	\item \emph{Plugin de eclipse arm-none-eabi-gdb}
 	\footnote{Software de configuración de eclipse para usar el depurador GNU para procesadores ARM Cortex-A/R/M.}: realiza la interpretación de comandos de	GDB-MI y muestra los resultados en la interfaz gráfica del editor de texto de C en el IDE del Eclipse.
-	\item \emph{arm-none-eabi-gdb}
-	\footnote{Software de debug originario de linux.}: realiza el mapeo de los símbolos de C con las instrucciones en código máquina que se ejecutan en el microcontrolador (mapea las funciones al código binario en flash), para
+	\item \emph{arm-none-eabi-gdb}: software de debug originario de linux que realiza el mapeo de los símbolos de C con las instrucciones en código máquina que se ejecutan en el microcontrolador (mapea las funciones al código binario en flash), para
 	luego ejecutar los comandos de parar, continuar o de uso de brakpoints.
-	\item \emph{OpenOCD (Open On-Chip Debugger)}\footnote{Software de código abierto que interactúa con el puerto JTAG de un depurador de hardware.}: provee a GDB el remote interface protocol para permitirle acceder al hardware. Traduce transacciones JTAG o SWD (mediante el puerto serie sobre USB) a comandos remote-protocol de GDB. OpenOCD utiliza scripts de configuración (archivos *.cfg) donde se describe el microcontrolador a depurar y la interfaz de hardware para acceder al mismo (en adelante \emph{"Debugger HW"}).
+	\item \emph{OpenOCD (Open On-Chip Debugger)}: software de código abierto que interactúa con el puerto JTAG de un depurador de hardware, provee a GDB el remote interface protocol para permitirle acceder al hardware. Traduce transacciones JTAG o SWD (mediante el puerto serie sobre USB) a comandos remote-protocol de GDB. OpenOCD utiliza scripts de configuración (archivos *.cfg) donde se describe el microcontrolador a depurar y la interfaz de hardware para acceder al mismo (en adelante \emph{"Debugger HW"}).
 	\item \emph{Debugger HW}: en el caso de la EDU-CIAA es el circuito de interfaz fisica para pasar de JTAG a USB (modo puerto serie virtual). En la EDU-CIAA
 	viene incluido en la misma placa que esta el microcontrolador a depurar.
-	\item \emph{Microcontrolador a depurar}: El microcontrolador posee un periferico específico para \emph{debug} con interfaz JTAG
-	\footnote{Acrónimo de Joint Test Action Group, es utilizado como mecanismo para depuración de sistemas embebidos, proveendo una puerta trasera para acceder al sistema.}, teniendo acceso para modificar la RAM, Flash y los registros del Microcontrolador.
+	\item \emph{Microcontrolador a depurar}: El microcontrolador posee un periferico específico para \emph{debug} con interfaz JTAG (Acrónimo de Joint Test Action Group, es utilizado como mecanismo para depuración de sistemas embebidos, proveendo una puerta trasera para acceder al sistema) teniendo acceso para modificar la RAM, Flash y los registros del Microcontrolador.
 \end{itemize}
 
 Una alternativa para la programación de un software de depuración a nivel de bloques de CIAABOT es, entonces, mantener el mapeo entre los bloques de programa de CIAABOT y su C generado y comunicarse con GDB, mediante GDB-MI como lo realiza el plugin de Eclipse.
@@ -100,14 +97,14 @@ Firmata4CIAA es un programa que implementa el protocolo firmata en la EDU-CIAA-N
 El funcionamiento del entorno propuesto se puede resumir en los siguientes pasos:
 
 \begin{itemize}
-	\item Ejecutar un programa bloque a bloque, usando Javascript internamente, hasta que se encuentre con un bloque que requiera acceso a algún periferico del hardware.
+	\item Ejecutar un programa bloque a bloque, usando Javascript internamente, hasta que se encuentre con un bloque que requiera acceso a algún periférico del hardware.
 	\item Enviar comandos firmata a la placa cuando se encuentre un bloque de acceso a algún periférico.
 	\item Visualizar el contenido de las variables en un determinado momento de la ejecución.
-	\item Instalación del protocolo firmata de la CIAA, sólo en el caso de ser necesario.
+	\item Instalación del programa que implementa el protocolo firmata en la CIAA, sólo en el caso de ser necesario.
 \end{itemize}	
 
 Cabe destacar que los bloques gráficos que acceden a los periféricos,
-serán más lentos que si se tuviera que implentar mediante GDB-MI, ya que ese programa accedería al hardware a la velocidad en la que
+serán más lentos que si se tuviera que implementar mediante GDB-MI, ya que ese programa accedería al hardware a la velocidad en la que
 se llama a las instrucciones del hardware, debido al código binario compilado
 instalado en la placa.
 
@@ -117,15 +114,15 @@ misma PC del usuario. El programa se ejecutará dentro del contexto del VM de
 javascript, que es más rápido que el código c compilado en el microcontrolador.
 
 De esta manera si se miden los tiempos de ensayos, cuando se instala el firmware
-del codigo C generado en la placa contra la ejecución de los bloques con firmata, estos tiempos no serán los mismos.
+del código C generado en la placa contra la ejecución de los bloques con firmata, estos tiempos no serán los mismos.
 
 Una ventaja para el usuario de CIAABOT, es que podrá depurar el programa sin necesidad de esperar la generación del código C a partir del programa en bloques, su compilación (especialmente en Windows) y descarga a la plataforma reduciendo los tiempos de desarrollo del programa.
 
 
-\section{Características del entorno CIAABOT debug}
+\section{Características del entorno \emph{CIAABOT Debug}}
 \label{sec:Características del entorno CIAABOT debug}
 
-El Entorno de Programación de CIAABOT debug debe ser capaz de permitirle al usuario realizar las siguientes tareas:
+El Entorno de Programación de \emph{CIAABOT Debug} debe ser capaz de permitirle al usuario realizar las siguientes tareas:
 
 \begin{itemize}
 	\item Abrir o importar un programa realizado en CIAABOT IDE.
@@ -133,17 +130,54 @@ El Entorno de Programación de CIAABOT debug debe ser capaz de permitirle al usu
 	\item Establecer puntos de interrupción  (puntos de parada en los bloques).
 	\item Permitir la visualización del valor de las variables durante la ejecución del programa.
 	\item Ejecución del programa con o sin puntos de interrupciones activos (\emph{breakpoints}).
-	\item Pausar y Parar la ejecución del programa desde cualquier momento dado.
+	\item Pausar y parar la ejecución del programa desde cualquier momento dado.
 	\item Instalación del programa que implementa el protocolo firmata en la EDU-CIAA-NXP, sólo en el caso de ser necesario.
 \end{itemize}
 
 Los proyectos creados en CIAABOT IDE son guardados como archivos con extensión .cbp, la misma contiene la información del proyecto, su nombre, el modelo de CIAABOT utilizado
 y el diagrama en bloques. Un proyecto puede abrirse desde el entorno de \emph{debug}, la información del proyecto es cargado y el diagrama en bloques es mostrado.
 
-\subsection{Modos de funcionamiento}
-\label{subsec:Modos de funcionamiento}
+\section{Interfaz gráfica de \emph{CIAABOT Debug}}
+La figura \ref{fig:debug-modos} expone la composición de la interfaz gráfica de \emph{CIAABOT Debug}.
 
-En la figura \ref{fig:diagrama-estados} se expone el diagrama de estados de el software CIAABOT \emph{debug}.
+
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics[width=15cm]{./Figures/CIAABOT-DEBUG-GUI-2.png}
+		\par\caption{Composición de la intergaz gráfica de \emph{CIAABOT Debug}.}\label{fig:debug-modos}
+	\end{center}
+\end{figure}
+
+
+\emph{CIAABOT Debug} se compone de las siguientes partes:
+
+\begin{itemize}
+\item
+Conexión con la plataforma.
+\item
+Editor de programa.	
+\item
+Iniciar sesión de depuración.
+\item
+Herramientas de control de ejecución.
+\item
+Menú de visualización de variables y puntos de interrupción.
+\end{itemize}
+
+En la figura \ref{fig:debug-modos} se resaltan cada una de ellas:
+
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics[width=15cm]{./Figures/CIAABOT-DEBUG-GUI-3.png}
+		\par\caption{Composición de la intergaz gráfica de \emph{CIAABOT Debug}.}\label{fig:debug-modos}
+	\end{center}
+\end{figure}
+
+
+\section{Máquina de estados de \emph{CIAABOT Debug}}
+\label{sec:Modos de funcionamiento}
+
+En la figura \ref{fig:diagrama-estados} se expone el diagrama de estados de el software \emph{CIAABOT Debug}.
 
 
 \begin{figure}[!htbp]
@@ -154,111 +188,99 @@ En la figura \ref{fig:diagrama-estados} se expone el diagrama de estados de el s
 \end{figure}
 
 
-La figura \ref{fig:debug-modos} muestra dentro de la interfaz gráfica de usuario los modos de funcionamiento del sistema.
+\subsection{Desconectado}
+\label{subsec:No Conectado}
 
-
-
-\begin{figure}[!htbp]
-	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.35]{./Figures/debug-modos.png}
-		\par\caption{Modos de funcionamiento.}\label{fig:debug-modos}
-	\end{center}
-\end{figure}
-
-
-\subsubsection{Desconectado}
-\label{subsubsec:No Conectado}
-
-La aplicación inicia en modo \emph{Desconectado}. En este modo de funcionamiento se permite la edición de bloques de programa, el botón de inicio de sesión de depuración se encuentra deshabilitado, como las herramientas de control de ejecución. Mientras no este depurando se habilita la edición del programa. La figura \ref{fig:desconectado} muestra este primer modo de funcionamiento.
+La aplicación inicia en estado \emph{Desconectado}. En este modo de funcionamiento se permite la edición de bloques de programa, el botón de inicio de sesión de depuración se encuentra deshabilitado, como las herramientas de control de ejecución. Mientras no este depurando se habilita la edición del programa. La figura \ref{fig:desconectado} expone la interfaz gráfica en este estado.
 
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.35]{./Figures/debug-inicio.png}
-		\par\caption{Estado No Conectado.}\label{fig:desconectado}
+		\includegraphics[width=15cm]{./Figures/debug-inicio.png}
+		\par\caption{Estado Donectado.}\label{fig:desconectado}
 	\end{center}
 \end{figure}
 
 
-\subsubsection{Conectando}
-\label{subsubsec:Conectando}
+\subsection{Conectando}
+\label{subsec:Conectando}
 
-Cuando la aplicación esta en modo \emph{Conectando} permite la edición de bloques de programa y verifica si la EDU-CIAA-NXP tiene descargado el programa firmata4CIAA, si lo tiene pasa a modo \emph{ConectadoConFirmata4CIAA}, sino pasa a modo \emph{ConectadoSinFirmata4CIAA}.
+Cuando la aplicación esta en estado \emph{Conectando} permite la edición de bloques de programa y verifica si la EDU-CIAA-NXP tiene descargado el programa firmata4CIAA, si lo tiene pasa a estado \emph{Conectado Con Firmata4CIAA}, sino pasa a \emph{Conectado Sin Firmata4CIAA}.
 
-\subsubsection{ConectadoSinFirmata4CIAA}
-\label{subsubsec:ConectadoSinFirmata4CIAA}
+\subsection{Conectado Sin Firmata4CIAA}
+\label{subsec:Conectado Sin Firmata4CIAA}
 
-Si la aplicación paso a modo \emph{ConectadoSinFirmata4CIAA}, realiza la consulta al usuario si quiere descargar el programa firmata4CIAA, si el usuario elige que sí, entonces se procede a realizar la descarga, y si elige que no entonces la aplicación vuelve al modo \emph{Desconectado}.
+Si la aplicación paso a estado \emph{Conectado Sin Firmata4CIAA}, realiza la consulta al usuario si quiere descargar el programa Firmata4CIAA, si el usuario elige que sí, entonces se procede a realizar la descarga, y si elige que no entonces la aplicación vuelve al modo \emph{Desconectado}.
 
-\subsubsection{DescargandoFirmata4CIAA}
-\label{subsubsec:Conectando}
+En la figura \ref{fig:instalar-firmata} muestra la consulta enviada al usuario.
 
-La aplicación pasa a este modo \emph{DescargandoFirmata4CIAA} cuando el usuario eligio realizar la descarga del programa firmata4CIAA. Si en medio del proceso existiese algún problema de descarga, se avisará al usuario.
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics*[width=9cm,height=5cm]{./Figures/instalar-firmata.png}
+		\par\caption{Descargar Firmata4CIAA.}\label{fig:instalar-firmata}
+	\end{center}
+\end{figure}
 
-\subsubsection{ConectadoConFirmata4CIAA}
-\label{subsubsec:ConectadoConFirmata4CIAA}
+\subsection{Descargando Firmata4CIAA}
+\label{subsec:Descargando Firmata4CIAA}
 
-Cuando la aplicación esta en modo \emph{ConectadoConFirmata4CIAA}, se habilita la edición de bloques de programa y también se habilita el inicio de sesión de depuración
+La aplicación pasa al estado \emph{Descargando Firmata4CIAA} cuando el usuario eligió realizar la descarga del programa Firmata4CIAA. Si en medio del proceso existiese algún problema de descarga, se avisará al usuario.
+
+Entre los archivos de \emph{CIAABOT Debug} se encuentra el proyecto de Firmata4CIAA previamente compilado para la EDU-CIAA-NXP. Para descargarlo el entorno requiere configurar la ruta del \emph{toolchain} y de \emph{OpenOCD}. Con esa información simplemente ejecuta el comando \emph{make download} en la ruta de dicho proyecto.
+
+La figura \ref{fig:Configuracion} muestra la ventana desde donde se puede realizar la configuración de paths.
+
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics*[width=10cm]{./Figures/Configuracion.PNG}
+		\par\caption{Configuración de paths.}\label{fig:Configuracion}
+	\end{center}
+\end{figure}
+
+
+\subsection{Conectado Con Firmata4CIAA}
+\label{subsec:Conectado Con Firmata4CIAA}
+
+Cuando la aplicación pasa al estado \emph{Conectado Con Firmata4CIAA}, se habilita la edición de bloques de programa y también se habilita el inicio de sesión de depuración
 En la figura \ref{fig:conectado} se muestra este modo de funcionamiento.
 
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.35]{./Figures/debug-conectado.png}
-		\par\caption{Estado Conectado con firmata4CIAA.}\label{fig:conectado}
+		\includegraphics[width=15cm]{./Figures/debug-conectado.png}
+		\par\caption{Estado Conectado con Firmata4CIAA.}\label{fig:conectado}
 	\end{center}
 \end{figure}
 
-\subsubsection{ConectadoEnSesionDeDepuración}
-\label{subsubsec:ConectadoEnSesionDeDepuración}
+\subsection{Conectado En Sesión De Depuración}
+\label{subsec:Conectado En Sesion De Depuración}
 
-Cuando la aplicación esta en modo Conectado, y el usuario inicio la sesion de depuración, el entorno habilita la barra de herramientas de control de ejecución, permitiendole realizar el ensayo de su programa sin poder editarlo. La figura \ref{fig:debug} muestra la aplicación con este modo de funcionamiento.
+En estado Conectado, y el usuario inicio la sesión de depuración, el entorno habilita la barra de herramientas de control de ejecución, permitiendole realizar el ensayo de su programa sin poder editarlo. La figura \ref{fig:debug} muestra la aplicación con este estado.
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.35]{./Figures/debug-debug.png}
+		\includegraphics[width=15cm]{./Figures/debug-debug.png}
 		\par\caption{Estado Depurando.}\label{fig:debug}
 	\end{center}
 \end{figure}
 
-\section{Conexión con la plataforma}
-\label{sec:Conexión con la plataforma}
-
-El entorno de desarrollo del \emph{debug} permite al usuario la configuración del puerto serial de la placa EDU-CIAA-NXP a la que esta conectada, este paso es importante y fundamental para el momento de interactuar con la depuración.
-
-Cuando existe una conexión por puerto serie con la aplicación y la misma detecta que la EDU-CIAA-NXP no tiene el programa que implementa el protocolo firmata, entonces enviará una alerta al usuario, y le dará la opción de descargar en su placa EDU-CIAA-NXP.
-En la figura \ref{fig:instalar-firmata} se muestra la alerta enviada al usuario.
-
-\begin{figure}[!htbp]
-	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics*[width=9cm,height=5cm]{./Figures/instalar-firmata.png}
-		\par\caption{Instalar firmata.}\label{fig:instalar-firmata}
-	\end{center}
-\end{figure}
 
 \section{Sesión de depuración}
 \label{sec:Sesión de depuración}
 
-\subsubsection{Iniciar/detener sesión}
-\label{subsubsec:Iniciar/detener sesión}
+\subsection{Iniciar/detener sesión}
+\label{subsec:Iniciar/detener sesión}
 
-Al tener la EDU-CIAA-NXP con firmata4CIAA, la aplicación estará lista para iniciar con la sesión de depuración permitiendole al usuario hacer click sobre el ícono de \emph{debug}, como se muestra en la figura \ref{fig:debug_view_habilitada}.
+Cuando inicia la aplicación el icono de \emph{debug} se muestra deshabilitado (color gris), como se muestra en la figura \ref{fig:debug_view_habilitada}.
+Al tener la EDU-CIAA-NXP con Firmata4CIAA, la aplicación estará lista para iniciar la sesión de depuración, cambiando el icono de \emph{debug} de color gris a color verde (habilitado), de esta manera se  permite al usuario hacer click, y luego de esta acción la sesión de depuración es iniciada y el entorno habilita las herramientas de control de ejecución como se muestra en la figura\ref{fig:herramientas-control-ejecucion} y el ícono de color verde habilitado pasa al color naranja de \emph{debug}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.65]{./Figures/debug_active_green.PNG}
-	\caption{Habilitado en inicio de sesión de depuración.}
+	\includegraphics[scale=.50]{./Figures/estadosBotonDebug.PNG}
+	\caption{Estados de los botones de depuración.}
 	\label{fig:debug_view_habilitada}
 \end{figure}
 
-La figura \ref{fig:debug_view} muestra el inicio de sesión iniciada por el usuario. Cuando la sesión es iniciada, el entorno habilita las herramientas de control de ejecución como se muestra en la figura \ref{fig:herramientas-control-ejecucion}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=.65]{./Figures/debug_view.PNG}
-	\caption{Sesión de depuración Iniciada.}
-	\label{fig:debug_view}
-\end{figure}
 
 \begin{figure}[h]
 	\centering
@@ -270,7 +292,7 @@ La figura \ref{fig:debug_view} muestra el inicio de sesión iniciada por el usua
 
 La sesión de depuración finaliza cuando el programa termino de ejecutarse paso a paso o con puntos de ruptura (\emph{breakpoints}), ó si el usuario presiono el comando de control de ejecución \emph{Detener depuración}. 
 
-\subsubsection{Herramientas de control de ejecución}
+\subsection{Herramientas de control de ejecución}
 \label{subsubsec:Iniciar/Herramientas de control de ejecución}
 
 En la tabla \ref{tabla:Comandos} se listan los comandos de control de ejecución junto a una breve descripción.
@@ -293,12 +315,12 @@ En la tabla \ref{tabla:Comandos} se listan los comandos de control de ejecución
 		\includegraphics{./Figures/terminate.PNG} & Detener depuración & 
 		Termina la depuración del programa. \\
 		\hline
-		\includegraphics{./Figures/step_into.PNG} & Pasar adentro & Ingresar a ejecutar el código en caso de ejecutar un llamado a función. \\
+		\includegraphics{./Figures/step_into.PNG} & Pasar adentro (\emph{step into}) & Ingresar a ejecutar el código en caso de ejecutar un llamado a función. \\
 		\hline
-		\includegraphics{./Figures/step_over.PNG} & Pasar por encima & Continuar con el siguiente paso. La ejecución continuará en el siguiente bloque. En caso de que el bloque sea un llamado a función ejecutarlo sin ingresar al código de dicha función \\
+		\includegraphics{./Figures/step_over.PNG} & Pasar por encima (\emph{step over})& Continuar con el siguiente paso. La ejecución continuará en el siguiente bloque. En caso de que el bloque sea un llamado a función ejecutarlo sin ingresar al código de dicha función \\
 		\hline
-		\includegraphics{./Figures/step_return.PNG} & Paso de regreso & 
-		Ejecutar hasta encontrar un retorno de función. Esta opción detiene la ejecución después de salir de la función actual. \\
+		\includegraphics{./Figures/step_return.PNG} & Paso de regreso (\emph{step return}) & 
+		Ejecutar hasta encontrar un retorno de función. \\
 		\hline
 	\end{tabular}
 	\par\caption{Comandos de control de ejecución.}
@@ -308,7 +330,7 @@ En la tabla \ref{tabla:Comandos} se listan los comandos de control de ejecución
 El usuario podrá ejecutar un programa haciendo click en el ícono \emph{Ejecutar} de la barra de herramientas. De la misma manera para detener un programa en ejecución, podrá hacerlo mediante el icono \emph{detener ejecución}.
 A medida que el programa se ejecuta, el flujo de control sobre los bloques es resaltado para que el alumno pueda seguirlo. 
 
-En la figura \ref{fig:debugPaso1} se muestra un ejemplo de ejecución de cada uno de los bloques, comenzando por el bloque del programa principal, seguido por el bloque de repetir por siempre, y como siguiente paso, se muestra la ejecución de un bloque de establecimiento de un servomotor a 0 grados. En la figura \ref{fig:debugPaso2} se muestra la continuación del ejemplo anterior, en este paso se
+En la figura \ref{fig:debugPaso1} se expone un ejemplo de programa donde se ejecutan cada uno de los bloques con el comando  \emph{Pasar por encima (step over)}, comenzando por el bloque del programa principal, seguido por el bloque de repetir por siempre, y como siguiente paso, se muestra la ejecución de un bloque de establecimiento de un servomotor a 0 grados. En la figura \ref{fig:debugPaso2} se muestra la continuación del ejemplo anterior, en este paso se
 muestra la ejecución de un bloque de espera de 1 segundo. Luego en la figura \ref{fig:debugPaso3} se
 muestra la ejecución de un bloque de establecimiento de un servomotor a 180 grados.
 
@@ -335,7 +357,7 @@ muestra la ejecución de un bloque de establecimiento de un servomotor a 180 gra
 \end{figure}
 
 La interfaz gráfica de usuario permite indicar al depurador cuándo pausar un programa, mediante el estableciendo de puntos de interrupción (\emph{breakpoints}).
-Para establecer una bandera de punto de interrupción, el entorno permite que el usuario haga click en el bloque en donde quiere pausar el programa. Cuando la ejecución del programa llege a este punto, el programa se detendrá. En la figura \ref{fig:add-breakpoint} se muestra el menú contextual del bloque desde donde se puede establecer el punto de interrupción.
+Para establecer un de punto de interrupción, el entorno permite que el usuario haga click en el bloque en donde quiere pausar el programa. Cuando la ejecución del programa llege a este punto, el programa se detendrá. En la figura \ref{fig:add-breakpoint} se muestra el menú contextual del bloque desde donde se puede establecer el punto de interrupción.
 
 \begin{figure}[!htbp]
 	\centering
@@ -344,7 +366,7 @@ Para establecer una bandera de punto de interrupción, el entorno permite que el
 	\label{fig:add-breakpoint}
 \end{figure}
 
-Cuando se hace click en el bloque, debería mostrar un círculo rojo; lo que significa que el punto de interrupción se establece en ese bloque (figura \ref{fig:breakpoint}).
+Cuando se hace click en el bloque, debería mostrar un círculo rojo. Esto significa que el punto de interrupción se establece en ese bloque (figura \ref{fig:breakpoint}).
 
 \begin{figure}[!htbp]
 	\centering
@@ -353,7 +375,7 @@ Cuando se hace click en el bloque, debería mostrar un círculo rojo; lo que sig
 	\label{fig:breakpoint}
 \end{figure}
 
-Para eliminar el punto de interrupción del bloque, el usuario podrá removerlo desde el menú contextual del mismo bloque. Despues de realizar la acción, el circulo rojo del bloque se eliminará. Se muestra el menú contextual en la figura \ref{fig:breakpoint-eliminar}.
+Para eliminar el punto de interrupción del bloque, el usuario podrá removerlo desde el menú contextual del mismo bloque. Despues de realizar la acción, el circulo rojo del bloque se eliminará. Se ilustra el menú contextual en la figura \ref{fig:breakpoint-eliminar}.
 
 \begin{figure}[!htbp]
 	\centering
@@ -368,49 +390,37 @@ En la siguiente figura \ref{fig:desactivar-breakpoints} se muestra el ícono.
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
 		\includegraphics[scale=.80]{./Figures/desactivar-breakpoints.PNG}
-		\par\caption{Desactivar los Puntos de interrupción activo.}\label{fig:desactivar-breakpoints}
+		\par\caption{Desactivar los Puntos de interrupción activos.}\label{fig:desactivar-breakpoints}
 	\end{center}
 \end{figure}
 
+\subsection{Menú de visualización}
+\label{subsec:Iniciar/Menú de visualización}
 
-En la siguiente figura \ref{fig:skip_all_breakpoints_inactive} se muestra el ícono de Puntos de interrupción inactivo cuando paso de estar activo.
-
-\begin{figure}[!htbp]
-	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics[scale=.80]{./Figures/skip_all_breakpoints_inactive.PNG}
-		\par\caption{Desactivar los Puntos de interrupción inactivo.}\label{fig:skip_all_breakpoints_inactive}
-	\end{center}
-\end{figure}
-
-\subsubsection{Menú de visualización}
-\label{subsubsec:Iniciar/Menú de visualización}
-
-
-Si el programa usa variables, es útil ver los valores cambiantes de cualquiera de las variables que se utilizan en el programa, las cuales se mostrarán a medida que se ejecuta el programa.
-El menú de visualización de variables, mostrara al usuario el par nombre/valor de las variables usadas. En la siguiente figura \ref{fig:ventana-variables} se muestra el panel de variables.
+El menú de visualización se divide en dos áreas, una para visualización de variables y otra para puntos de ruptura. La primera permite observar como cambian las variables de programa a medida que se ejecuta mientras está activa la sesión de depuración. En la siguiente figura \ref{fig:ventana-variables} se muestra el panel de variables.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics*[width=9cm,height=3cm]{./Figures/ventana-variables.PNG}
+	\includegraphics*[width=9cm,height=3cm]{./Figures/variables.PNG}
 	\caption{Menú de visualización de variables.}
 	\par\label{fig:ventana-variables}
 \end{figure}
 
-Desde el menú de visualización de punto de ruptura (\emph{breakpoints}) en la interfaz gráfica de usuario, se permite modificar el estado activo/inactivo de cada punto de ruptura. En la siguiente figura \ref{fig:ventana} se muestra la ventana de \emph{breakpoints}.
+La segunda, permite la visualización de todos los puntos de ruptura (\emph{breakpoints}) insertados en el programa, se permite modificar el estado activo/inactivo de cada punto de ruptura. En la siguiente figura \ref{fig:ventana} se muestra la ventana de \emph{breakpoints}.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics*[width=8cm,height=2cm]{./Figures/ventana.PNG}
+	\includegraphics*[width=8cm,height=2cm]{./Figures/breakpoints.PNG}
 	\caption{Ventana de Puntos de ruptura (\emph{breakpoints}).}
 	\par\label{fig:ventana}
 \end{figure}
 
-El entorno de desarrollo del \emph{debug}, básicamente maneja la ejecución en los siguientes estados:
+El entorno maneja la ejecución en los siguientes estados:
 
 \begin{itemize}
-	\item Ejecución del programa sin breakpoint.
-	\item Ejecución del programa con breakpoints activos.	
-	\item Ejecución del programa con breakpoints inactivos.
+	\item Ejecución de bloque sin breakpoint.
+	\item Ejecución de bloque con breakpoints activos.	
+	\item Ejecución de bloque con breakpoints inactivos.
 \end{itemize}
 
 
@@ -431,22 +441,23 @@ El área de edición de programa del entorno del \emph{debug}, contiene la misma
 	\item Texto.
 \end{itemize}
 
-El propósito de tener la misma estructura de bloques dentro de la caja de herramientas, es permitir la modificación del programa cuando el usuario encuentre errores en la sesión de debug y quiera corregirlo en el entorno del \emph{debug}, de esta manera no tendrá la necesidad de guardar el programa para recién poder editarlo en CIAABOT IDE.
+El propósito, es permitir la modificación del programa cuando el usuario encuentre errores en la sesión de debug y quiera corregirlo en el entorno del \emph{debug}, de esta manera no tendrá la necesidad de guardar el programa para recién poder editarlo en CIAABOT IDE.
 
 
 \section{Implementación}
-\label{sec:Modelo computacional}
+\label{sec:Implementación}
 
-CIAABOT \emph{debug} esta desarrollado en el lenguaje Javascript, cuando se importa un proyecto desde CIAABOT IDE con extensión .cbp, el entorno generará internamente código javascript. El archivo .cbp tiene la estructura de archivo de texto xml. Se separan los bloques gráficos que acceden a los periféricos de los bloques gráficos que no acceden a los periféricos, generando de esta manera el código correspondiente que integra todas las partes para que cuando se realice la ejecución del programa, lo haga de forma transparente para el usuario.
+\emph{CIAABOT Debug} esta desarrollado en el lenguaje Javascript, cuando se importa un proyecto desde CIAABOT IDE con extensión .cbp, el entorno genera internamente código javascript para ejecutar la misma lógica que el programa en bloques. 
+Para realizar esto se utiliza el archivo .cbp tiene la estructura de archivo de texto xml. Se separan los bloques gráficos que acceden a los periféricos de los bloques gráficos que no acceden a los periféricos, generando de esta manera el código correspondiente que integra todas las partes para que cuando se realice la ejecución del programa, lo haga de forma transparente para el usuario.
 
-En la Aplicación mediante el cliente firmata Johnny-Five se establece la comunicación entre la aplicación y la placa EDUCIAA-NXP, para el manejo de los periféricos. 
+Mediante el cliente firmata Johnny-Five se establece la comunicación entre la aplicación y la placa EDUCIAA-NXP, para el manejo de los periféricos. 
 
-Johnny-Five es un cliente firmata, basado en el lenguaje javaScript, y dentro del entorno de \emph{debug}, es el encargado de interactuar con el microcontrolador con firmata4CIAA para la manipulación de los periféricos.
+Johnny-Five es un cliente firmata, basado en el lenguaje javaScript, y dentro del entorno de \emph{debug}, es el encargado de interactuar con el microcontrolador con Firmata4CIAA para la manipulación de los periféricos.
 En la siguiente figura \ref{fig:diagrama-bloques} se muestra el diágrama de bloques.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics*[width=13cm]{./Figures/diagrama-bloques.PNG}
+	\includegraphics*[width=13cm]{./Figures/diagrama-bloques-2.PNG}
 	\caption{Diágrama de Bloques para el manejo de los periféricos.}
 	\par\label{fig:diagrama-bloques}
 \end{figure}
@@ -465,16 +476,17 @@ A modo de ejemplo, en la figura \ref{fig:codigo-servo-bloques} cómo se armaría
 	\label{fig:codigo-servo-bloques}
 \end{figure}
 
-El código de salida en lenguaje Javascript de la figura \ref{fig:codigo-servo-bloques} se muestra a continuación:
+El código de salida en lenguaje Javascript de la figura \ref{fig:codigo-servo-bloques} se muestra 
+en el Algoritmo \ref{cod:codigo-servo-c}:
 
 
-\begin{lstlisting}[caption={Salida del código en bloques de la figura 	\ref{fig:codigo-servo-bloques}.}\label{cod:codigo-servo-c}] 
-while(true){
-	ciaa.setServo(0);
-	wait.for(1, sec);
-	ciaa.setServo(180);
-	wait.for(1, sec);
-};
+\begin{lstlisting}[caption={Salida del código en bloques de la figura \ref{fig:codigo-servo-bloques}.}\label{cod:codigo-servo-c}] 
+		                while(true){
+			                	ciaa.setServo(0);
+			                	wait.for(1, sec);
+				                ciaa.setServo(180);
+				                wait.for(1, sec);
+		                };
 
 \end{lstlisting}
 
@@ -491,9 +503,9 @@ while(true){
 	\end{figure}
    
     \begin{lstlisting}[caption={Código que ejecuta una de las funciones de johnny five del bloque de la figura \ref{fig:servoj5}.}\label{cod:codigo-servo-j5}] 
-     setServo: function(range) {
-        servo.to(range);
-     }
+                  setServo: function(range) {
+                    servo.to(range);
+                  }
     \end{lstlisting}
 	
 	\item Bloques gráficos que no acceden a los periféricos: son aquellos que se ejecutan en la misma pc, por medio de javascript. Por ejemplo las sentencias loop-for, if-else, etc.  En la figura \ref{fig:waitj} se muestra un bloque de este tipo.
@@ -506,24 +518,24 @@ while(true){
 	\end{figure}
 
 	\begin{lstlisting}[caption={Código en javascript del bloque de la figura \ref{fig:waitj}.}\label{cod:codigo-servo-j}] 
-	for: function(time, unit) {
-		duration = time;
-		waitStart = getTime(unit);
-	}
+			       for: function(time, unit) {
+				        duration = time;
+			        	waitStart = getTime(unit);
+		           }
 	\end{lstlisting}
 \end{itemize}
 
-En la figura \ref{fig:servoj5} se mostro el bloque gráfico que usaba los comados de la API Johnny-five.io. A modo de ejemplo se hizo referencia a un bloque gráfico que usa la siguiente función: 
+En la figura \ref{fig:servoj5} se expone el bloque gráfico que utiliza los comandos de la API Johnny-five.io. A modo de ejemplo se hizo referencia a un bloque gráfico que usa la siguiente función: 
 
-\emph{to(degrees 0-180 [, ms [, rate]])// establece la posicion de 0 a 180 grados}
+\emph{to(degrees 0-180 [, ms [, rate]])// establece la posición de 0 a 180 grados}
 
 
-La figura \ref{fig:DocSecuencia} muestra el diágrama de secuencia del acceso a un períferico mediante el protocolo firmata.
+La figura \ref{fig:DocSecuencia} muestra el diagrama de secuencia del acceso a un periférico mediante el protocolo firmata.
 
 
 \begin{figure}[!htbp]
 	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
-		\includegraphics*[width=15cm]{./Figures/DocSecuencia.pdf}
+		\includegraphics*[width=15cm]{./Figures/DocSecuencia.PNG}
 		\par\caption{Diagrama de secuencia.}\label{fig:DocSecuencia}
 	\end{center}
 \end{figure}
@@ -532,7 +544,7 @@ La figura \ref{fig:DocSecuencia} muestra el diágrama de secuencia del acceso a 
 \subsection{Herramientas utilizadas}
 \label{subsec:Implementación del modelo computacional Servicios}
 
-Para el desarrollo del entorno de debugger se utilizaron los siguientes proyectos de código abierto:
+Para el desarrollo del entorno de \emph{debugger} se utilizaron los siguientes proyectos de código abierto:
 
 \begin{itemize}
 	\item Blockly\citep{blockly}: CIABOOT IDE esta basado en esta biblioteca, por lo cual fue necesario la implementación de ciertas rutinas de código en javascript con la biblioteca blockly para lograr la visualización de los diagramas de bloques creados en CIABOOT IDE, así como también la manipulación de estos bloques gráficos para lograr la interacción con el interprete de Javascript. 
@@ -545,42 +557,74 @@ Para el desarrollo del entorno de debugger se utilizaron los siguientes proyecto
 	
 	\item JQuery\citep{jQuery}: la biblioteca multiplataforma de JavaScript permite interactuar con los documentos HTML, manipular el árbol DOM de la página, agregar dinamismo a la aplicación y manejar eventos.
 	
-	\item Signals\citep{signals}: biblioteca escrita en JavaScript que implementa el patrón publicación/subscripción para agregar emisores de eventos al código cuando los bloques gráficos que se estan ejecutando son resaltados.
+	\item Signals\citep{signals}: biblioteca escrita en JavaScript que implementa el patrón publicación/suscripción para agregar emisores de eventos al código cuando los bloques gráficos que se están ejecutando son resaltados.
 	
-	\item Johnny five\citep{johnny}: esta basado en Node.js y se integra muy bien con librerias javascript que usamos en el entorno. Lo usaremos para comunicarnos con la EDU-CIAA-NXP y trabajar con los perífericos como actuadores, sensores, etc.
+	\item Johnny five\citep{johnny}: esta basado en Node.js y se integra muy bien con bibliotecas javascript que usamos en el entorno. Lo usaremos para comunicarnos con la EDU-CIAA-NXP y trabajar con los periféricos como actuadores, sensores, etc.
 	
-	\item Express\citep{express}:  marco de aplicación web ligero, rápido y muy útil, esta basado en http para Node.js, lo usamos para crear la aplicaciones web que luego será embebida en una aplicación de escritorio. Esta biblioteca  proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies.
+	\item Express\citep{express}:  framework de aplicación web ligero, rápido y muy útil, esta basado en http para Node.js, lo usamos para crear la aplicaciones web que luego será embebida en una aplicación de escritorio. Esta biblioteca  proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies.
 	
 	\item Serialport\citep{serialport}: junto a firmata es usada para combinar JavaScript y hardware. Esta biblioteca proporciona listener que es propio del puerto serial.
 	
-	\item Electron\citep{electron}: Nos permite armar el desarrollo de la aplicacion de escritorio multiplataforma utilizando tecnologías web.
+	\item Electron\citep{electron}: Nos permite armar el desarrollo de la aplicación de escritorio multiplataforma utilizando tecnologías web.
 \end{itemize}
 
-\subsection{Descargar Firmata4CIAA}
-\label{subsec:Descargar Firmata4CIAA}
 
-Cuando el entorno descarga el programa a la EDU-CIAA-NXP, NodeJS se encargará de ejecutar los comandos:
-\begin{itemize}
-	\item make clean.
-	\item make.	
-	\item make download.		
-\end{itemize}
+\subsection{Archivo de estado de \emph{CIAABOT Debug}}
+\label{subsec:Archivo de CIAABOT Debug}
 
-Antes de la descarga de firmata4CIAA, es necesario descargar el firmware de firmata4CIAA.
+Cuando se abre un proyecto (archivo \emph{.cbp}), se crea un archivo \emph{.cbd} donde se guardan los puntos de interrupción que utiliza el usuario durante su sesión de depuración.
 
-Ya que la aplicación tiene como alcance que pueda ser ejecutado minimamente en 
-windows o linux, se listan las rutas fijas desde donde debe quedar instalado el firmware:
+El archivo \emph{.cbd} se implementa mediante un archivo de texto en formato JSON\citep{json}. El mismo se guarda al cerrar el proyecto. De esta forma se recuperan los puntos de interrupción que fueron agregados al programa
+y si se encuentran activos o no, de acuerdo a la elección realizada por el usuario en la última sesión de depuración. 
 
-\begin{itemize}
-	\item Ruta de firware en Windows: C:CIAA/Firmare
-	\item Ruta de firware en Linux: /home/USER/ciaa-ide/Firmware		
-\end{itemize}
+Cuando se abre un archivo .cbp creado en CIAABOT IDE y actualizado también en \emph{CIAABOT Debug}, y este mismo archivo fue modificado desde la última sesión de depuración en el entorno de \emph{debug} (por ejemplo si se elimina un bloque gráfico que tenia un punto de interrupción), el entorno detectará estas diferencias, actualizará el archivo .cbd con estos cambios y mostrará al usuario en los bloques coincidentes con las opciones de depuración de la última sesión.
 
-De esta manera el servicio de NodeJs buscará las herramientas necesarias (compilador y debugger). 
+Esta información es útil cuando el usuario cerro por algún motivo el entorno de \emph{CIAABOT Debug} y cuando lo vuelve a abrir no pierde el estado de los puntos de interrupciones utilizados en su última sesión de depuración.
+
+A continuación se observa un ejemplo de la estructura del archivo nombrado \emph{debug.cbd}.
+
+\lstset{
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black},
+}
+
+\begin{lstlisting}[caption=Archivo de descripción de \emph{board} nombrado \emph{fakeBoard.json}] 
+{
+  "type": "ciaabotDebugState",
+  "breakpoins": [
+     {
+       "type": "asociation",
+       "key": {
+               "type": "logic_operation\",
+               "id": "Ju6).aSXM}[dFL_Xw/p,\"
+              },
+       "value": {
+                "type": "breakpoint",
+                "id": 1,
+                "active" : true
+                }
+     }, 
+     {
+       "type": "asociation",
+       "key": {
+               "type": "ciaa_sapi_gpio_digital_read",
+               "id": "Oj7~RU|??CeufGPNV$|W\"
+              },
+       "value": {
+                "type": "breakpoint",
+                "id": 2,
+                "active" : false
+                }
+      }
+    ]
+}
+\end{lstlisting}
 
 
 \subsection{GitLab}
 \label{subsec:GitLab}
 
-Como estrategia de mitigación del riesgo de pérdida de código que se tuvo en cuenta al inicio de la planificación, se propuso el versionado de código, para realizarlo se eligio la herramienta Gitlab, que es un servicio web de control de versiones y desarrollo de software colaborativo. Esta basado en Git y permite repositorios de código públicos y privados. 
+Como estrategia de mitigación del riesgo de pérdida de código, se propuso el versionado de código, para realizarlo se eligió la herramienta Gitlab, que es un servicio web de control de versiones y desarrollo de software colaborativo. Esta basado en Git y permite repositorios de código públicos y privados. 
 

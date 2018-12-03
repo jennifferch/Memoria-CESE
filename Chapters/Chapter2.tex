@@ -5,7 +5,7 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-En este capítulo se presenta los componentes de CIAABOT, con más detalle, luego se establecen los requerimientos y
+En este capítulo se presenta los componentes de CIAABOT con más detalle, luego se establecen los requerimientos y
 la planificación para el desarrollo del presente trabajo.
 
 \section{Componentes CIAABOT}
@@ -17,7 +17,7 @@ A continuación se describirá en detalle cada una de las partes de CIAABOT.
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.50]{./Figures/componentesCiabot.png}
-	\caption{Componentes CIAABOT. Recuperado de \url{https://laboratorios.fi.uba.ar}}
+	\caption{Componentes CIAABOT.}
 	\label{fig:componentesCiaabot}
 \end{figure}
 
@@ -26,7 +26,7 @@ A continuación se describirá en detalle cada una de las partes de CIAABOT.
 El IDE esta basado en el paradigma reactivo que permite armar programas propios, que pueden ser programas puntuales como manejo de actuadores y motores
 en un sistema embebido, así como también, un prototipado rápido.
 
-El IDE de CIAABOT tiene como componente principal al editor. A partir de allí el usuario puede desarrollar su propio programa gráfico encastrando de manera fácil bloques predifinidos creados en lenguaje javascript, como se observa en la figura \ref{fig:ciaabot-ide-bloques} 
+El IDE de CIAABOT tiene como componente principal al editor. A partir de allí el usuario puede desarrollar su propio programa gráfico encastrando de manera fácil bloques predefinidos creados en lenguaje javascript, como se observa en la figura \ref{fig:ciaabot-ide-bloques} 
 
 El entorno de desarrollo integrado permite de manera gradual ir comprendiendo como realizar el mismo programa en lenguaje C, debido a que permite ver en tiempo real el código C generado mientras se van encastrando los bloques.
 
@@ -40,19 +40,21 @@ creado, que podría ser utilizado posteriormente.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.65]{./Figures/ciaabot-ide-bloques.JPG}
+	\includegraphics[scale=.60]{./Figures/ciaabot-ide-bloques.PNG}
 	\caption{Editor gráfico de CIAABOT-IDE.}
 	\label{fig:ciaabot-ide-bloques}
 \end{figure}
 
-La plataforma CIAABOT esta programado usando las siguientes tecnologías \citep{angular}\citep{blockly}\citep{electron}\citep{nodejs}\citep{typescript}:
+La plataforma CIAABOT esta programado usando las siguientes tecnologías:
 
 \begin{itemize}
-	\item Angular.
-	\item Blockly.
-	\item Electrón.
-	\item NodeJS.
-	\item TypeScript.
+	\item Angular\citep{angular}: es una plataforma usada para
+	desarrollar aplicaciones web en HTML y JavaScript.
+	\item Blockly\citep{blockly}: es una biblioteca que utiliza bloques gráficos encastrables para representar
+    conceptos de código.
+	\item Electrón\citep{electron}: es una biblioteca de código usado para armar aplicaciones de escritorio multiplataforma	utilizando tecnologías web.
+	\item NodeJS\citep{nodejs}: es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google.
+	\item TypeScript\citep{typescript}: es un superconjunto de JavaScript, esencialmente añade tipado estático y objetos basados en clases.
 \end{itemize}
 
 El funcionamiento principal en la plataforma CIAABOT es la siguiente:
@@ -65,8 +67,16 @@ El funcionamiento principal en la plataforma CIAABOT es la siguiente:
 	\item Descarga el binario compilado en flash y realiza el reset.
 \end{itemize}
 
+En la figura \ref{fig:diagrama-ciaabot} se expone el funcionamiento principal de la plataforma CIAABOT.
 
-hacer diagrama
+\begin{figure}[!htbp]
+	\begin{center}  % [width=10cm,height=5cm] [width=\textwidth]
+		\includegraphics[scale=.50]{./Figures/diagrama-ciaabot.pdf}
+		\par\caption{Diagrama del funcionamiento principal de la plataforma CIAABOT.}\label{fig:diagrama-ciaabot}
+	\end{center}
+\end{figure}
+
+
 
 
 \subsection{CIAABOTS}
@@ -79,13 +89,13 @@ Para ser usados por las impresoras 3D, es necesario armar el poncho de diseño a
 \subsection{Firmware}
 \label{subsec:Firmware}
 
-Debido a que la plataforma CIAABOT esta basada en el firmware v2 \citep{CIAA:firmwarev2} del proyecto CIAA, puede crear desde funciones simples a más complejas, para realizarlo
+Debido a que la plataforma CIAABOT esta basada en el firmware v2 \citep{CIAA:firmwarev2} del Proyecto CIAA, puede crear desde funciones simples a más complejas, para realizarlo
 utiliza las siguientes herramientas:
 
 \begin{itemize}
-	\item \emph{Makefile}: para la gestión de dependencias, de esta manera puede construir
+	\item \emph{Makefile}\citep{makefile}: para la gestión de dependencias, de esta manera puede construir
 	el software desde sus archivos fuente.	
-	\item \emph{OpenOCD}: una herramienta OpenSource, usado para el grabado del firmware
+	\item \emph{OpenOCD}\citep{openocd}: una herramienta OpenSource, usado para el grabado del firmware
 	en las placas.
 	\item \emph{sAPI}\citep{sAPI}: permite manejar los periféricos del microcontrolador de una manera
 	muy sencilla.
@@ -101,13 +111,18 @@ tregado. Se evaluaron sus posibilidades y se clasificaron en categorías.
 \subsection{Requerimientos asociados con el Proyecto CIAABOT}
 
 \begin{itemize}
-	\item El entorno de programación deberá poder ejecutarse minimamente dentro del entorno Linux y Windows.	
-	\item El uso debe ser sencillo, rápido e intuitivo.
-	\item El entorno de debugger debe tener un diseño basado en ventanas cómodas y que permitan
-	tener mucha información a la vista.
-	\item El entorno de debugger debe ocupar muy poca memoria.
-	\item El diseño de la herramienta debe seguir los estilos de interfaz establecidos en el Proyecto CIAABOT.
-	\item La herramienta debe poder permitir el monitoreo de las entradas y salidas de los diferentes periféricos de la placa.	
+\item
+REQ1: El entorno de depuración deberá poder utilizarse dentro de los sistemas operativos Windows y Linux.
+\item
+REQ2: Debe controlar de la ejecución de un programa corriendo en la plataforma de hardware.
+\item
+REQ3: Exponer el estado de las variables del programa en tiempo de ejecución.
+\item
+REQ4: Permitir la edición de programas para corregir errores de lógica encontrados en tiempo de ejecución.
+\item
+REQ5: La interfaz gráfica debe seguir los lineamientos de estilo establecidos en el Proyecto CIAABOT.
+\item
+REQ6: Debe presentar un diseño de interfaz gráfica intuitiva, con elementos similares a los hallados en otras herramientas de depuración.
 \end{itemize}
 
 \subsection{Componentes establecidos en CIAABOT}
@@ -119,7 +134,7 @@ tregado. Se evaluaron sus posibilidades y se clasificaron en categorías.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.50]{./Figures/EDU-CIAA-NXP_Foto.png}
+	\includegraphics[width=14cm]{./Figures/EDU-CIAA-NXP_Foto.png}
 	\caption{Placa EDU-CIAA-NXP}
 	\label{fig:edu-ciaa-nxp}
 \end{figure}
@@ -137,7 +152,7 @@ tregado. Se evaluaron sus posibilidades y se clasificaron en categorías.
 \begin{itemize}
 	\item Se actualizará el manual de usuario, y se incluirán ejemplos básicos funcionales del entorno de depuración.	
 	\item Se utilizarán las principales bibliotecas firmata que permita interactuar con el cliente que está corriendo en la placa.
-	\item Se implementará el debugger de la aplicación sobre una maqueta o robot adaptado a funcionar con la placa EDU-CIAA.
+	\item Se implementará el \emph{debugger} de la aplicación sobre una maqueta o robot adaptado a funcionar con la placa EDU-CIAA.
 	\item Se evaluarán los resultados del proyecto y su facilidad de uso en ámbitos de enseñanza reales.
 \end{itemize}
 
@@ -148,12 +163,12 @@ Para lograr los objetivos propuestos, se realizó el desglose en tareas, y se ut
 
 \subsection{Desglose en tareas} 
 
-Para alcanzar objetivos concretos, se plantean los entragables para el proyecto:
+Para alcanzar objetivos concretos, se plantean los entregables para el proyecto:
 
 \begin{itemize}
-	\item Pluggin Debugger	
-	\item Código fuente del proyecto debugger.
-	\item Actualización del Manual de usuario, mostrando ejemplos didácticos del uso del debugger en la plataforma..
+	\item Entorno de Debugger.	
+	\item Código fuente del proyecto.
+	\item Actualización del Manual de usuario, mostrando ejemplos didácticos del uso del debugger en la plataforma.
 	\item El presente informe final.
 \end{itemize}
 
@@ -251,7 +266,7 @@ Todas las flechas entrantes a un nodo o tarea son las dependencias de la misma.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.80]{./Figures/diagramaNode.png}
+	\includegraphics[width=14cm]{./Figures/aon.pdf}
 	\caption{Diagrama de Node.}
 	\label{fig:diagramaNode}
 \end{figure}
@@ -261,7 +276,7 @@ A modo de referencia se muestra en la siguiente figura  \ref{fig:tablaColores} u
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.60]{./Figures/tablaColores.png}
+	\includegraphics[width=12cm]{./Figures/tablaColores.png}
 	\caption{Tabla de colores diagrama Activity}
 	\label{fig:tablaColores}
 \end{figure}
