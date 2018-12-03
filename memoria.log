@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.20)  3 DEC 2018 01:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.20)  3 DEC 2018 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3813,53 +3813,58 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 14.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 14.
+
+Overfull \hbox (0.9651pt too wide) in paragraph at lines 40--41
+[]\T1/ppl/m/n/10.95 El en-torno de \T1/ppl/m/it/10.95 CIAA-BOT de-bug \T1/ppl/m
+/n/10.95 le da la ca-pa-ci-dad de de-pu-ra-ción al pro-yec-to CIAA-
+ []
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 26.
-)
+(babel)             in language  on input line 49.
 1: section
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 56.
 [47
 
 
 
-]
+])
+LaTeX Info: Redefining \sptext on input line 249.
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 270.
- [48
-
-
-]
+(babel)             in language  on input line 249.
+ [48]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 270.
 Package babel Info: Redefining spanish shorthand >>
@@ -3887,7 +3892,10 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 274.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 274.
-[49]
+[49
+
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
  (./memoria.aux
 LaTeX Info: Redefining \sptext on input line 30.
@@ -3923,7 +3931,7 @@ dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type
 1/urw/palatino/uplbi8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:
 /texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (63 pages, 3465730 bytes).
+Output written on memoria.pdf (63 pages, 3467027 bytes).
 PDF statistics:
  1878 PDF objects out of 2073 (max. 8388607)
  1591 compressed objects within 16 object streams
